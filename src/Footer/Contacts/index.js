@@ -6,8 +6,6 @@ import styled from 'styled-components';
 import contactsEmail from './contact-email.svg';
 import contactsPhone from './contact-phone.svg';
 import contactsMessenger from './contact-messengers.svg';
-// import FeedbackPopUp from './FeedbackPopUp/index';
-// import Button from '../../generic/Form/Buttons/GhostButton';
 import logowhite from './logowhite.svg';
 
 // const ContactsAnchor = Scroll.Element;
@@ -87,7 +85,7 @@ const Logo = styled.img`
   @media (min-width: 768px) {
     display: block;
     height: 50px;
-    padding: 10px;
+    padding: 5px;
     opacity: 0.5;
   }
 `;
@@ -102,64 +100,31 @@ const Contact = props => (
   </ContactWrapper>
 );
 
-export default class extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      isOpened: false,
-    };
-
-    this.handleOpen = this.handleOpen.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-  }
-
-  handleOpen() {
-    this.setState({
-      isOpened: true,
-    });
-  }
-
-  handleClose() {
-    this.setState({
-      isOpened: false,
-    });
-  }
-
-  render() {
-    return (
-      <Wrapper>
-        {/*<FeedbackPopUp*/}
-          {/*isOpened={this.state.isOpened}*/}
-          {/*handleClose={this.handleClose}*/}
-          {/*header="Оставить сообщение"*/}
-        {/*/>*/}
-        {/*<ContactsAnchor name="ContactsAnchor" />*/}
-        <ContactsWrapper>
-          <Contacts>
-            <Logo src={logowhite} />
-            <Contact
-              icon={contactsEmail}
-              label="Email"
-              info="info@casplase.ru"
-              href="mailto:info@casplase.ru"
-            />
-            <Contact
-              icon={contactsPhone}
-              label="Телефон для связи"
-              info="+7 (916) 228-24-56"
-              href="tel:+79162282456"
-            />
-            <Contact
-              icon={contactsMessenger}
-              label="WhatsApp, Telegram"
-              info="+7 (915) 284-23-84"
-              href="whatsapp://send?text=Здравствуйте!&phone=+79152842384"
-            />
-          </Contacts>
-          <LeaveMessageButton onClick={this.handleOpen}>Оставить сообщение</LeaveMessageButton>
-        </ContactsWrapper>
-      </Wrapper>
-    );
-  }
-}
+export default () => (
+  <Wrapper>
+    <ContactsWrapper>
+      <Contacts>
+        <Logo src={logowhite} />
+        <Contact
+          icon={contactsEmail}
+          label="Email"
+          info="info@casplase.ru"
+          href="mailto:info@casplase.ru"
+        />
+        <Contact
+          icon={contactsPhone}
+          label="Телефон для связи"
+          info="+7 (916) 228-24-56"
+          href="tel:+79162282456"
+        />
+        <Contact
+          icon={contactsMessenger}
+          label="WhatsApp, Telegram"
+          info="+7 (915) 284-23-84"
+          href="whatsapp://send?text=Здравствуйте!&phone=+79152842384"
+        />
+      </Contacts>
+      <LeaveMessageButton onClick={this.handleOpen}>Оставить сообщение</LeaveMessageButton>
+    </ContactsWrapper>
+  </Wrapper>
+);
