@@ -124,7 +124,7 @@ export default () => (
           href="whatsapp://send?text=Здравствуйте!&phone=+79152842384"
         />
       </Contacts>
-      <LeaveMessageButton onClick={this.handleOpen}>Оставить сообщение</LeaveMessageButton>
+      <LeaveMessageButton>Оставить сообщение</LeaveMessageButton>
     </ContactsWrapper>
   </Wrapper>
 );
