@@ -4,12 +4,12 @@ import styled from 'styled-components';
 import instagramIcon from '../Social/contact-social-insta.svg';
 import vkIcon from '../Social/contact-social-vk.svg';
 import telegramIcon from '../Social/contact-social-telegram.svg';
-import visa from '../payments/visa.svg';
-import maestro from '../payments/maestro.svg';
-import mastecard from '../payments/mastercard.svg';
-import sbOnline from '../payments/sb_online.svg';
-import mir from '../payments/mir.svg';
-import qiwi from '../payments/qiwi.svg';
+import visa from '../Payments/visa.svg';
+import maestro from '../Payments/maestro.svg';
+import mastecard from '../Payments/mastercard.svg';
+import sbOnline from '../Payments/sb_online.svg';
+import mir from '../Payments/mir.svg';
+import qiwi from '../Payments/qiwi.svg';
 
 const Wrapper = styled.div`
   background-color: #272727;
