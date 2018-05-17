@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import video from './rain.mp4';
+import video from './video.mp4';
 import pixel from './pixel.png'
 
 const Wrapper = styled.div`
@@ -10,8 +10,19 @@ const Wrapper = styled.div`
   overflow: hidden;
 `;
 
+
 const Video = styled.video`
-    width: 100%;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto; 
+  height: auto;
+  z-index: -1000; 
+  overflow: hidden;
 `;
 
 const Pixel = styled.div`
@@ -23,19 +34,28 @@ const Pixel = styled.div`
 
 const Text = styled.div`
   width: 100%;
-  padding-top: 100px;
+  padding-top: 110px;
   position: absolute;
   color: #fff;
   text-align: center;
+  
+  @media(min-width: 768px) {
+    padding-top: 70px;
+  }
 `;
 
 const H1 = styled.h1`
-  font-size: 48px;
+  font-size: 32px;
   font-family: 'Roboto-Light', sans-serif;
+  
+  @media(min-width: 768px) {
+    font-size: 48px;
+  }
 `;
 
 const SubHeader = styled.span`
   font-family: 'Roboto', sans-serif;
+  font-size: 48px;
 `;
 
 export default () => (
@@ -43,7 +63,7 @@ export default () => (
     <Pixel />
     <Text>
       <H1>
-        Лазерная гравировка, резка, УФ-печать
+        Лазерная гравировка, <br />резка, УФ-печать
         <SubHeader><br />в Москве</SubHeader>
       </H1>
     </Text>
