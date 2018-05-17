@@ -45,6 +45,12 @@ const Substrate = styled.div`
   height: 60px;
 `;
 
+const Br = styled.br`
+  @media(min-width: 768px) {
+    display: none;
+  }
+`;
+
 export default () => (
   <div>
     <Wrapper>
@@ -52,6 +58,7 @@ export default () => (
         <Logo src={logo} />
         <Contacts>
           <Phone href="tel:+79162282456">+7 (916) 228-24-56</Phone>
+          <Br />
           <Mail href="mailto:info@casplase.ru">info@casplase.ru</Mail>
         </Contacts>
       </Menu>
