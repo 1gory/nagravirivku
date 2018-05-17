@@ -12,7 +12,7 @@ const mimeTypes = {
 };
 
 register(undefined, (mod, filename) => {
-  const ext = ['.png', '.jpg', '.svg'].find(f => filename.endsWith(f));
+  const ext = ['.png', '.jpg', '.svg', '.mp4'].find(f => filename.endsWith(f));
   if (!ext) return;
   if (ext !== '.svg' && fs.statSync(filename).size < 10000) {
     const file = fs.readFileSync(filename).toString('base64');
