@@ -67,7 +67,7 @@ export default () => (
         <SubHeader><br />в Москве</SubHeader>
       </H1>
     </Text>
-    <Video autoPlay muted loop>
+    <Video autoPlay playsInline muted loop>
       <source src={video} type="video/mp4" />
     </Video>
   </Wrapper>
