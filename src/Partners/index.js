@@ -21,7 +21,11 @@ const Header = styled(H2) `
 `;
 
 const Img = styled.img`
-  width: 200px;
+  width: 150px;
+  
+  @media(min-width: 768px) {
+    width: 200px;
+  }
 `;
 
 const LogosWrapper = styled.div`

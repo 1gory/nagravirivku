@@ -66,13 +66,18 @@ const ClearBlock = styled.div`
 
 const Wrapper = styled.div`
   background: #f3f3f3;
+  padding: 15px 0;
+  
+  @media(min-width: 768px) {
+    padding: 30px 0;
+  }
 `;
 
 const GalleryWrapper = styled.div`
-  padding: 40px 0;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   
   @media(min-width: 768px) {
+    padding-bottom: 80px;
     max-width: 1170px;
     margin: 0 auto;
   }

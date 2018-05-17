@@ -3,8 +3,11 @@ import styled from 'styled-components';
 import H2 from './../Elements/H2';
 
 const Wrapper = styled.div`
-  // background: #f3f3f3;
-  padding: 30px 0; 
+  padding: 15px 0; 
+  
+  @media(min-width: 768px) {
+    padding: 30px 0;
+  }
 `;
 
 const Header = styled(H2)`
@@ -12,13 +15,31 @@ const Header = styled(H2)`
 `;
 
 const PriceGroup = styled.div`
-  width: 600px;
+  width: auto;  
   margin: 0 auto;
-  padding-bottom: 30px;
+  padding: 0 20px;
+  padding-top: 15px;
+  
+  @media(min-width: 768px) {
+    padding-top: 30px;
+    width: 600px;
+  }
 `;
 
 const Name = styled.h3`
+  font-size: 1em;
+
+  @media(min-width: 768px) {
+    font-size: 1.17em;
+  }
+`;
+
+const Values = styled.div`
+  font-size: 13px;
   
+  @media(min-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const Count = styled.div`
@@ -43,44 +64,50 @@ export default () => (
     <Header>Цены</Header>
     <PriceGroup>
       <Name>Лазерная гравировка</Name>
-      <Count>
-        <Col>от 1000</Col>
-        <Col>от 500</Col>
-        <Col>от 10</Col>
-      </Count>
-      <Prices>
-        <Col>от 3.5 руб. см<sup>2</sup></Col>
-        <Col>от 3.5 руб. см<sup>2</sup></Col>
-        <Col>от 3.5 руб. см<sup>2</sup></Col>
-      </Prices>
+      <Values>
+        <Count>
+          <Col>от 1000</Col>
+          <Col>от 500</Col>
+          <Col>от 10</Col>
+        </Count>
+        <Prices>
+          <Col>от 3.5 руб. см<sup>2</sup></Col>
+          <Col>от 3.5 руб. см<sup>2</sup></Col>
+          <Col>от 3.5 руб. см<sup>2</sup></Col>
+        </Prices>
+      </Values>
     </PriceGroup>
 
     <PriceGroup>
       <Name>Лазерная резка кожа/пластик/фанера</Name>
-      <Count>
-        <Col>от 1000</Col>
-        <Col>от 500</Col>
-        <Col>от 10</Col>
-      </Count>
-      <Prices>
-        <Col>от 9 руб. м</Col>
-        <Col>от 14 руб. м</Col>
-        <Col>от 17 руб. м</Col>
-      </Prices>
+      <Values>
+        <Count>
+          <Col>от 1000</Col>
+          <Col>от 500</Col>
+          <Col>от 10</Col>
+        </Count>
+        <Prices>
+          <Col>от 9 руб. м</Col>
+          <Col>от 14 руб. м</Col>
+          <Col>от 17 руб. м</Col>
+        </Prices>
+      </Values>
     </PriceGroup>
 
     <PriceGroup>
       <Name>Печать</Name>
-      <Count>
-        <Col>от 1000</Col>
-        <Col>от 500</Col>
-        <Col>от 10</Col>
-      </Count>
-      <Prices>
-        <Col>от 10 руб. см<sup>2</sup></Col>
-        <Col>от 16.3 руб. см<sup>2</sup></Col>
-        <Col>от 17.6 руб. см<sup>2</sup></Col>
-      </Prices>
+      <Values>
+        <Count>
+          <Col>от 1000</Col>
+          <Col>от 500</Col>
+          <Col>от 10</Col>
+        </Count>
+        <Prices>
+          <Col>от 10 руб. см<sup>2</sup></Col>
+          <Col>от 16.3 руб. см<sup>2</sup></Col>
+          <Col>от 17.6 руб. см<sup>2</sup></Col>
+        </Prices>
+      </Values>
     </PriceGroup>
   </Wrapper>
 );

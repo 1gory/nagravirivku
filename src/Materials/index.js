@@ -8,7 +8,11 @@ import plastic from './plastic.jpg';
 import wood from './wood.jpg';
 
 const Wrapper = styled.div`
-  padding: 30px 0;
+  padding: 15px 0; 
+  
+  @media(min-width: 768px) {
+    padding: 30px 0;
+  }
 `;
 
 const Header = styled(H2)`

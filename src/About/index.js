@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
 import H2 from './../Elements/H2';
-import photo1 from './stevejobs.jpg';
+import photo1 from './panchenko.jpg';
+import photo2 from './igor.jpg';
+import photo3 from './solonitsky.jpg';
+import photo4 from './any.jpg';
 
 const Wrapper = styled.div`
   background: #f3f3f3;
@@ -25,7 +28,8 @@ const Img = styled.img`
 `;
 
 const Name = styled.div`
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 10px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
@@ -39,10 +43,17 @@ const Name = styled.div`
 `;
 
 const Description = styled.p`
-  width: 200px;
+  width: 100px;
+  font-size: 12px;
   margin: 0 auto;
   text-align: center;
   font-family: 'Roboto-Light', sans-serif;
+  padding-bottom: 15px;
+  
+  @media(min-width: 768px) {
+    font-size: 14px;
+    width: 200px;
+  }
 `;
 
 const RowWrapper = styled.div`
@@ -73,17 +84,17 @@ export default () => (
           <Description>Маркетинг, аналитика, реклама</Description>
         </Col>
         <Col xs={6} sm={6} md={3} lg={3}>
-          <Img src={photo1} alt="Игорь" />
+          <Img src={photo2} alt="Игорь" />
           <Name>Игорь</Name>
-          <Description>Разработка, верстка, интеграция инструментов</Description>
+          <Description>Разработка, верстка, инструменты</Description>
         </Col>
         <Col xs={6} sm={6} md={3} lg={3}>
-          <Img src={photo1} alt="Андрей" />
+          <Img src={photo3} alt="Андрей" />
           <Name>Андрей</Name>
-          <Description>Прием заказов, производство, логистика</Description>
+          <Description>Просчет заказов, контроль, логистика</Description>
         </Col>
         <Col xs={6} sm={6} md={3} lg={3}>
-          <Img src={photo1} alt="Аня" />
+          <Img src={photo4} alt="Аня" />
           <Name>Аня</Name>
           <Description>Подготовка макетов, дизайн, иллюстрации</Description>
         </Col>

@@ -25,6 +25,11 @@ const Logo = styled.img`
 const Contacts = styled.div`
   padding: 20px;
   font-family: 'Roboto-Light', sans-serif;
+  font-size: 12px;
+  
+  @media(min-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const Phone = styled.a`
