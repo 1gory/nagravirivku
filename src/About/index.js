@@ -69,7 +69,7 @@ const RowWrapper = styled.div`
 `;
 
 const TextAbout = styled.p`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto-Light', sans-serif;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px 40px;
