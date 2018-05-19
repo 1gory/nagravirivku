@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { Link } from 'react-router-dom';
+import Scroll from 'react-scroll';
 import instagramIcon from '../Social/contact-social-insta.svg';
 import vkIcon from '../Social/contact-social-vk.svg';
 import telegramIcon from '../Social/contact-social-telegram.svg';
@@ -54,6 +54,12 @@ const SocialNetworksIcons = styled.div`
 
 const FooterMenu = styled.div`
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  
+  @media (min-width: 768px) {
+    display: inline-block;
+  }
 `;
 
 const PaymentIcons = styled.div`
@@ -66,17 +72,25 @@ const PaymentServiceLogo = styled.img`
   padding: 5px 0 5px 15px;
 `;
 
+const scroller = Scroll.scroller;
+
+const handleClick = (anchor) => {
+  scroller.scrollTo(anchor, {
+    duration: 800,
+    delay: 100,
+    smooth: true,
+  });
+};
+
 export default () => (
   <Wrapper>
     <MenuWrapper>
       <FooterMenu>
-        <MenuLink to="/">Материалы</MenuLink>
-        <MenuLink to="/catalog">Цены</MenuLink>
-        <MenuLink to="/gallery">Галерея</MenuLink>
-         <MenuLink to="/cooperation" onlyDesktop>Партнеры</MenuLink>
-        <MenuLink to="/delivery">О нас</MenuLink>
+        <MenuLink onClick={() => (handleClick('MaterialsAnchor'))}>Материалы</MenuLink>
+        <MenuLink onClick={() => (handleClick('PriceAnchor'))}>Цены</MenuLink>
+        <MenuLink onClick={() => (handleClick('GalleryAnchor'))}>Галерея</MenuLink>
+        <MenuLink onClick={() => (handleClick('AboutAnchor'))}>О нас</MenuLink>
       </FooterMenu>
-
       <PaymentIcons>
         <PaymentServiceLogo src={visa} alt="Оплата картой visa" />
         <PaymentServiceLogo src={maestro} alt="Оплата картой maestro" />
@@ -86,15 +100,14 @@ export default () => (
         <PaymentServiceLogo src={qiwi} alt="Оплата через Киви" />
       </PaymentIcons>
     </MenuWrapper>
-
     <SocialNetworksIcons>
-      <a href="https://vk.com/casewoodru">
+      <a href="https://vk.com/casplase">
         <Icon src={vkIcon} />
       </a>
-      <a href="https://instagram.com/casewood.ru/">
+      <a href="https://www.instagram.com/casp_lase//">
         <Icon src={instagramIcon} />
       </a>
-      <a href="https://youtube.com/channel/UCRhZ8w5tkM5PE74Fq3q4ESQ">
+      <a href="tg://resolve?domain=andrew1322">
         <Icon src={telegramIcon} alt="CASEWOOD YouTube" />
       </a>
     </SocialNetworksIcons>

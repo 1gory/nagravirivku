@@ -33,8 +33,8 @@ app.get('/', (req, res) => {
     const styleTags = sheet.getStyleTags();
 
     const RenderedApp = htmlData
-      .replace('<style id="serverStyleTags"></style>', styleTags)
-      .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
+      // .replace('<style id="serverStyleTags"></style>', styleTags)
+      // .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
     ;
 
     res.send(RenderedApp);

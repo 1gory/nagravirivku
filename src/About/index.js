@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import Scroll from 'react-scroll';
 import { Row, Col } from 'react-flexbox-grid';
 import H2 from './../Elements/H2';
 import photo1 from './panchenko.jpg';
 import photo2 from './igor.jpg';
 import photo3 from './solonitsky.jpg';
 import photo4 from './any.jpg';
+
+const AboutAnchor = Scroll.Element;
 
 const Wrapper = styled.div`
   background: #f3f3f3;
@@ -58,7 +61,6 @@ const Description = styled.p`
 
 const RowWrapper = styled.div`
   padding: 30px;
-  padding-bottom: 60px;
   
   @media(min-width: 768px) {
     margin: 0 auto;
@@ -70,12 +72,13 @@ const TextAbout = styled.p`
   font-family: 'Roboto', sans-serif;
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px 60px;
+  padding: 20px 40px;
 `;
 
 export default () => (
   <Wrapper>
-    <Header>О нас</Header>
+    <AboutAnchor name="AboutAnchor" />
+    <Header>О компании</Header>
     <RowWrapper>
       <Row>
         <Col xs={6} sm={6} md={3} lg={3}>
@@ -101,10 +104,12 @@ export default () => (
       </Row>
     </RowWrapper>
     <TextAbout>
-      Разумеется, для оптовиков у нас особые условия и мы всегда предоставляем
-      высококачественный результат точно в сроки.
-      Логотип и слоган в виде лазерной гравировки в Москве может быть нанесен на поверхность
-      сувенирной продукции для вашего успешного брендинга. Напишите нам и мы обговорим индивидуальные условия.
+      Предоставляем готовые решения по услугам лазерной гравировки, резки, УФ печати.
+      Избавим вас от всех проблем связанных с заказом услуг.
+      Мы знаем как сложно выбрать компанию, которая изготовит ваш заказ качественно и срок!
+      Среднее время изготовления заказов 1-3 рабочих дня в зависимости от объема.
+      Имеется возможность срочного изготовления день в день.
+      В нашем штате имеется дизайнер, который бесплатно подготовит и согласует дизайн.
     </TextAbout>
   </Wrapper>
 );

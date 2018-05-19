@@ -1,4 +1,5 @@
 import React from 'react';
+import Scroll from 'react-scroll';
 import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
 import H2 from './../Elements/H2';
@@ -6,6 +7,8 @@ import leather from './leather.jpg';
 import metal from './metal.jpg';
 import plastic from './plastic.jpg';
 import wood from './wood.jpg';
+
+const MaterialsAnchor = Scroll.Element;
 
 const Wrapper = styled.div`
   padding: 15px 0; 
@@ -58,6 +61,7 @@ const Delimiter = styled.hr`
 
 export default () => (
   <Wrapper>
+    <MaterialsAnchor name="MaterialsAnchor" />
     <Header>C чем мы работаем</Header>
     <RowWrapper>
       <Row>

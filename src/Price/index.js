@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Scroll from 'react-scroll';
 import H2 from './../Elements/H2';
+
+const PriceAnchor = Scroll.Element;
 
 const Wrapper = styled.div`
   padding: 15px 0; 
@@ -61,6 +64,7 @@ const Col = styled.div`
 
 export default () => (
   <Wrapper>
+    <PriceAnchor name="PriceAnchor" />
     <Header>Цены</Header>
     <PriceGroup>
       <Name>Лазерная гравировка</Name>

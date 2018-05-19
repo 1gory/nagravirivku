@@ -1,7 +1,10 @@
 import React from 'react';
+import Scroll from 'react-scroll';
 import styled from 'styled-components';
 import Gallery from 'react-grid-gallery';
 import H2 from '../Elements/H2';
+
+const GalleryAnchor = Scroll.Element;
 
 const images =
   [
@@ -89,6 +92,7 @@ const Header = styled(H2)`
 
 export default () => (
   <Wrapper>
+    <GalleryAnchor name="GalleryAnchor" />
     <GalleryWrapper>
       <Header>Примеры работ</Header>
       <GalleryContent>

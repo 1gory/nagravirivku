@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import styled from 'styled-components';
-// import Scroll from 'react-scroll';
+import Scroll from 'react-scroll';
 import contactsEmail from './contact-email.svg';
 import contactsPhone from './contact-phone.svg';
 import contactsMessenger from './contact-messengers.svg';
@@ -53,7 +53,7 @@ const ContactIcon = styled.img`
 `;
 
 const Label = styled.div`
-  font-family: 'Lato-Regular';
+  font-family: 'Roboto-Light', sans-serif;
   font-weight: bold;
   color: #9d9d9d;
   font-size: 12px;
@@ -61,7 +61,7 @@ const Label = styled.div`
 `;
 
 const Info = styled.a`
-  font-family: 'Lato-Light';
+  font-family: 'Roboto-Light', sans-serif;
   font-size: 16px;
   color: #ffffff;
 `;
@@ -71,7 +71,7 @@ const LeaveMessageButton = styled.button`
   cursor: pointer;
   border: solid 1px #fff;
   border-radius: 20px;
-  font-family: 'Lato-Light';
+  font-family: 'Roboto-Light', sans-serif;
   font-size: 16px;
   padding: 10px 25px;
   color: #fff
@@ -89,6 +89,16 @@ const Logo = styled.img`
     opacity: 0.5;
   }
 `;
+
+const scroller = Scroll.scroller;
+
+const handleClick = () => {
+  scroller.scrollTo('FormAnchor', {
+    duration: 800,
+    delay: 100,
+    smooth: true,
+  });
+};
 
 const Contact = props => (
   <ContactWrapper>
@@ -124,7 +134,7 @@ export default () => (
           href="whatsapp://send?text=Здравствуйте!&phone=+79152842384"
         />
       </Contacts>
-      <LeaveMessageButton>Оставить сообщение</LeaveMessageButton>
+      <LeaveMessageButton onClick={handleClick}>Оставить сообщение</LeaveMessageButton>
     </ContactsWrapper>
   </Wrapper>
 );

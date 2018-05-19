@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import Scroll from 'react-scroll';
 import InputMask from 'react-input-mask';
 import H2 from './../Elements/H2';
 import bg from './bg.jpg';
+
+const FormAnchor = Scroll.Element;
 
 const Wrapper = styled.div`
   background: #FFF;
@@ -122,12 +125,14 @@ const SubHeader = styled.span`
 export default () => (
   <div>
     <Wrapper>
+      <FormAnchor name="FormAnchor" />
       <Background>
         <Form>
           <Text>
-            <Header>Оставьте телефон и получите:</Header>
-            <SubHeader>— Расчет стоимости заказа за 30 мин</SubHeader>
-            <SubHeader>— Консультацию по маркировке/гравировке</SubHeader>
+            <Header>Оставьте заявку и получите:</Header>
+            <SubHeader>— Расчет в течение 30 минут</SubHeader>
+            <SubHeader>— Помощь в создании макета</SubHeader>
+            <SubHeader>— Консультацию по заказу</SubHeader>
           </Text>
           <Fields>
             <div>
