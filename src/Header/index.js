@@ -57,7 +57,7 @@ export default () => (
       <Menu>
         <Logo src={logo} />
         <Contacts>
-          <Phone href="tel:+79162282456">+7 (916) 228-24-56</Phone>
+          <Phone href="tel:+79030069990">+7 (903) 006-99-90</Phone>
           <Br />
           <Mail href="mailto:info@casplase.ru">info@casplase.ru</Mail>
         </Contacts>
