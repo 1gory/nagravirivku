@@ -118,7 +118,7 @@ const SubHeader = styled.span`
   
   @media (min-width: 768px) {
     font-size: 20px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
   }
 `;
 
