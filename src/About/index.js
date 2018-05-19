@@ -84,7 +84,7 @@ export default () => (
         <Col xs={6} sm={6} md={3} lg={3}>
           <Img src={photo1} alt="Андрей" />
           <Name>Андрей</Name>
-          <Description>Главный приоритет - качество предоставляемых услуг!</Description>
+          <Description>Моя специализация быстрый и точный расчет стоимости услуг</Description>
         </Col>
         <Col xs={6} sm={6} md={3} lg={3}>
           <Img src={photo2} alt="Игорь" />
@@ -94,7 +94,7 @@ export default () => (
         <Col xs={6} sm={6} md={3} lg={3}>
           <Img src={photo3} alt="Андрей" />
           <Name>Андрей</Name>
-          <Description>Моя специализация быстрый и точный расчет стоимости услуг</Description>
+          <Description>Главный приоритет - качество предоставляемых услуг!</Description>
         </Col>
         <Col xs={6} sm={6} md={3} lg={3}>
           <Img src={photo4} alt="Аня" />
