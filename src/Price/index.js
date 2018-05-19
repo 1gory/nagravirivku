@@ -25,7 +25,7 @@ const PriceGroup = styled.div`
   
   @media(min-width: 768px) {
     padding-top: 30px;
-    width: 600px;
+    width: 550px;
   }
 `;
 
@@ -46,20 +46,30 @@ const Values = styled.div`
 `;
 
 const Count = styled.div`
-  padding: 10px;
   display: flex;
-  border-bottom: 1px solid #3333;
+  justify-content: space-between;
+  
   font-family: 'Roboto-Light', sans-serif;
+  
+  & div {
+    border-bottom: 1px solid #3333;
+  }
 `;
 
 const Prices = styled.div`
-  padding: 10px;
   display: flex;
+  justify-content: space-between;
   font-family: 'Roboto-Light', sans-serif;
 `;
 
 const Col = styled.div`
-  width: 33%;
+  padding: 0;
+  width: 28%;
+  
+  @media(min-width: 768px) {
+    padding: 10px;
+    width: 20%;
+  }
 `;
 
 export default () => (
@@ -70,14 +80,14 @@ export default () => (
       <Name>Лазерная гравировка</Name>
       <Values>
         <Count>
-          <Col>от 1000</Col>
-          <Col>от 500</Col>
-          <Col>от 10</Col>
+          <Col>от 1000 ед.</Col>
+          <Col>от 500 ед.</Col>
+          <Col>от 10 ед.</Col>
         </Count>
         <Prices>
-          <Col>от 3.5 руб. см<sup>2</sup></Col>
-          <Col>от 3.5 руб. см<sup>2</sup></Col>
-          <Col>от 3.5 руб. см<sup>2</sup></Col>
+          <Col>от 3.5 руб/см<sup>2</sup></Col>
+          <Col>от 3.5 руб/см<sup>2</sup></Col>
+          <Col>от 3.5 руб/см<sup>2</sup></Col>
         </Prices>
       </Values>
     </PriceGroup>
@@ -86,30 +96,30 @@ export default () => (
       <Name>Лазерная резка кожа/пластик/фанера</Name>
       <Values>
         <Count>
-          <Col>от 1000</Col>
-          <Col>от 500</Col>
-          <Col>от 10</Col>
+          <Col>от 1000 м.</Col>
+          <Col>от 500 м.</Col>
+          <Col>от 10 м.</Col>
         </Count>
         <Prices>
-          <Col>от 9 руб. м</Col>
-          <Col>от 14 руб. м</Col>
-          <Col>от 17 руб. м</Col>
+          <Col>от 9 руб/м</Col>
+          <Col>от 14 руб/м</Col>
+          <Col>от 17 руб/м</Col>
         </Prices>
       </Values>
     </PriceGroup>
 
     <PriceGroup>
-      <Name>Печать</Name>
+      <Name>УФ-печать</Name>
       <Values>
         <Count>
-          <Col>от 1000</Col>
-          <Col>от 500</Col>
-          <Col>от 10</Col>
+          <Col>от 1000 ед.</Col>
+          <Col>от 500 ед.</Col>
+          <Col>от 10 ед.</Col>
         </Count>
         <Prices>
-          <Col>от 10 руб. см<sup>2</sup></Col>
-          <Col>от 16.3 руб. см<sup>2</sup></Col>
-          <Col>от 17.6 руб. см<sup>2</sup></Col>
+          <Col>от 10 руб/см<sup>2</sup></Col>
+          <Col>от 16.3 руб/см<sup>2</sup></Col>
+          <Col>от 17.6 руб/см<sup>2</sup></Col>
         </Prices>
       </Values>
     </PriceGroup>

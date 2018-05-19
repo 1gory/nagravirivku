@@ -28,7 +28,8 @@ const MenuWrapper = styled.div`
   }
 `;
 
-const MenuLink = styled.span`
+const MenuLink = styled.a`
+  cursor: pointer;
   text-align: center;
   text-decoration: none;
   color: #fff;
@@ -72,6 +73,17 @@ const PaymentServiceLogo = styled.img`
   padding: 5px 0 5px 15px;
 `;
 
+const Requisites = styled.div`
+  color: #fff;
+  font-family: 'Roboto-Light', sans-serif;
+  font-size: 12px;
+  padding: 20px;
+    
+  @media (min-width: 768px) {
+    text-align: center;
+  }
+`;
+
 const scroller = Scroll.scroller;
 
 const handleClick = (anchor) => {
@@ -100,6 +112,14 @@ export default () => (
         <PaymentServiceLogo src={qiwi} alt="Оплата через Киви" />
       </PaymentIcons>
     </MenuWrapper>
+
+    <Requisites>
+      Индивидуальный предприниматель Панченко Андрей Дмитриевич<br />
+      ОГРНИП 318774600098068<br />
+      ИНН 771386120991<br />
+      Банк МОСКОВСКИЙ ФИЛИАЛ АО КБ "МОДУЛЬБАНК"<br />
+    </Requisites>
+
     <SocialNetworksIcons>
       <a href="https://vk.com/casplase">
         <Icon src={vkIcon} />
