@@ -86,8 +86,8 @@ export default () => (
         </Count>
         <Prices>
           <Col>от 3.5 руб/см<sup>2</sup></Col>
-          <Col>от 3.5 руб/см<sup>2</sup></Col>
-          <Col>от 3.5 руб/см<sup>2</sup></Col>
+          <Col>от 3.8 руб/см<sup>2</sup></Col>
+          <Col>от 4.5 руб/см<sup>2</sup></Col>
         </Prices>
       </Values>
     </PriceGroup>
