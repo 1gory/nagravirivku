@@ -7,7 +7,7 @@ const Wrapper = styled.div`
 `;
 
 const H2 = styled.h2`
-  font-family: 'Lato-Regular';
+  font-family: 'Lato-Regular', sans-serif;
   font-size: 24px;
   color: #9d9d9d;
 `;

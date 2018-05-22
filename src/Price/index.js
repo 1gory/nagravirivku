@@ -7,9 +7,11 @@ const PriceAnchor = Scroll.Element;
 
 const Wrapper = styled.div`
   padding: 15px 0; 
+  padding-bottom: 30px;
   
   @media(min-width: 768px) {
     padding: 30px 0;
+    padding-bottom: 60px;
   }
 `;
 
