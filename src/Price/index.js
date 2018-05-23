@@ -65,7 +65,7 @@ const Prices = styled.div`
 `;
 
 const Col = styled.div`
-  padding: 0;
+  padding: 5px 0;
   width: 28%;
   
   @media(min-width: 768px) {
