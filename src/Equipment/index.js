@@ -10,7 +10,6 @@ import three from './3.jpg';
 import four from './4.jpg';
 
 const Wrapper = styled.div`
-  background: #f3f3f3;
   padding: 30px 0;
 `;
 

@@ -60,6 +60,7 @@ const images =
 
 
 const GalleryContent = styled.div`
+  padding: 10px;
   padding-top: 20px;
 `;
 
