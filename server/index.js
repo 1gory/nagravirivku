@@ -34,9 +34,9 @@ app.get('/', (req, res) => {
     const styleTags = sheet.getStyleTags();
 
     const RenderedApp = htmlData
-      .replace('<style id="serverStyleTags"></style>', styleTags)
-      .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
-      .replace('{{remoteAddress}}', ip)
+      // .replace('<style id="serverStyleTags"></style>', styleTags)
+      // .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
+      // .replace('{{remoteAddress}}', ip)
     ;
 
     res.send(RenderedApp);

@@ -99,7 +99,7 @@ export default () => (
         <Col xs={6} sm={6} md={3} lg={3}>
           <Img src={photo4} alt="Аня" />
           <Name>Аня</Name>
-          <Description>Дизайн - моя стихия, делаю красиво для людей.</Description>
+          <Description>Дизайн - моя стихия, делаю красиво для людей</Description>
         </Col>
       </Row>
     </RowWrapper>
