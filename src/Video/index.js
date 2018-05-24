@@ -10,7 +10,6 @@ const Wrapper = styled.div`
   overflow: hidden;
 `;
 
-
 const Video = styled.video`
   position: absolute;
   top: 50%; 
@@ -30,6 +29,14 @@ const Pixel = styled.div`
   height: inherit;
   position: absolute;
   background-image: url(${pixel});
+`;
+
+const Mask = styled.div`
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  background: #000;
+  opacity: 0.3;
 `;
 
 const Text = styled.div`
@@ -61,6 +68,7 @@ const SubHeader = styled.span`
 export default () => (
   <Wrapper>
     <Pixel />
+    <Mask />
     <Text>
       <H1>
         Лазерная гравировка, <br />резка, УФ-печать

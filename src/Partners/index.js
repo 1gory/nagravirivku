@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import H2 from './../Elements/H2';
-import p1 from './1.jpg';
-import p2 from './2.jpg';
-import p3 from './3.jpg';
-import p4 from './4.jpg';
-import p5 from './5.jpg';
-import p6 from './6.jpg';
-import p7 from './7.jpg';
+import g585 from './585.jpg';
+import broshaker from './broshaker.jpg';
+import casewood from './casewood.jpg';
+import modulbank from './modulbank.jpg';
+import rosautodor from './rosautodor.jpg';
+import barplace from './barplace.jpg';
 
 const Wrapper = styled.div`
   padding: 30px 0;
@@ -21,7 +20,7 @@ const Header = styled(H2) `
 `;
 
 const Img = styled.img`
-  width: 150px;
+  width: 120px;
   
   @media(min-width: 768px) {
     width: 200px;
@@ -37,15 +36,14 @@ export default () => (
     <Header>Наши партнеры</Header>
     <LogosWrapper>
       <div>
-        <Img src={p1}/>
-        <Img src={p4}/>
-        <Img src={p7}/>
-        <Img src={p2}/>
+        <Img src={g585}/>
+        <Img src={barplace}/>
+        <Img src={casewood}/>
       </div>
       <div>
-        <Img src={p5}/>
-        <Img src={p6}/>
-        <Img src={p3}/>
+        <Img src={modulbank}/>
+        <Img src={broshaker}/>
+        <Img src={rosautodor}/>
       </div>
     </LogosWrapper>
   </Wrapper>

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Scroll from 'react-scroll';
 import { Row, Col } from 'react-flexbox-grid';
 import H2 from './../Elements/H2';
 import EquipmentCard from './EquipmentCard';
