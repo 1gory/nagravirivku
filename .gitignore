@@ -5,5 +5,8 @@
 
 /static/*
 
+uploads*
+
+/server/config.js
 /server/encryption/*
 /public/.well-known/*

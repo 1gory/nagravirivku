@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import validatePhone from '../functuons/validatePhone';
 import Scroll from 'react-scroll';
 import InputMask from 'react-input-mask';
 import H2 from './../Elements/H2';
@@ -49,7 +50,7 @@ const Input = styled(InputMask)`
   padding: 10px 40px;
   border: none;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: ${({invalidNumber}) => (invalidNumber ? '#ff9292' : '#fff' )};
   font-family: 'Roboto',sans-serif;
   font-size: 16px;
   
@@ -122,37 +123,147 @@ const SubHeader = styled.span`
   }
 `;
 
-export default () => (
-  <div>
-    <Wrapper>
-      <FormAnchor name="FormAnchor" />
-      <Background>
-        <Form>
-          <Text>
-            <Header>Оставьте заявку и получите:</Header>
-            <SubHeader>— Расчет в течение 30 минут</SubHeader>
-            <SubHeader>— Помощь в создании макета</SubHeader>
-            <SubHeader>— Консультацию по заказу</SubHeader>
-          </Text>
-          <Fields>
-            <div>
-              <Input
-                placeholder="Ваш телефон"
-                mask="+7 (999) 999-99-99"
-              />
-            </div>
-            <div>
-              <FileLabel>
-                Прикрепите файл...
-                <input type="file"/>
-              </FileLabel>
-            </div>
-            <div>
-              <Button>Оставить заявку</Button>
-            </div>
-          </Fields>
-        </Form>
-      </Background>
-    </Wrapper>
-  </div>
-);
+// const handleClick
+
+export default class extends Component {
+
+  constructor(){
+    super();
+
+    this.state = {
+      invalidNumber: false,
+      phone: '',
+      filePath: ''
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+    this.sendFile = this.sendFile.bind(this);
+    this.checkPhone = this.checkPhone.bind(this);
+    this.handleChangeForm = this.handleChangeForm.bind(this);
+    this.handleChangeFile = this.handleChangeFile.bind(this);
+  }
+
+  handleChangeForm(e) {
+    const state = {};
+    state[e.target.name] = e.target.value;
+    this.setState(state);
+  }
+
+  handleClick(formData) {
+    fetch('/api/order', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      credentials: 'include',
+      body: JSON.stringify(formData),
+    }).then(async (data) => {
+      this.props.handleOpen();
+      const response = await data.json();
+    }).catch((/* error */) => {
+      // this.setState({
+      //   fileFormStatus: ERROR_FORM_STATUS,
+      // });
+    });
+  }
+
+  handleChangeFile(event) {
+    const reader = new FileReader();
+    const file = event.target.files[0];
+    reader.onload = (/* e */) => {
+      if (file.size > 5000000) {
+        alert('Пожалуйста, выберите файл меньше 5Мб');
+      } else {
+        this.sendFile(file);
+      }
+    };
+
+    reader.readAsText(file);
+  }
+
+  sendFile(file) {
+    const form = new FormData();
+    form.append('file', file);
+    fetch('/api/file', {
+      method: 'POST',
+      body: form,
+    }).then(async (response) => {
+      if (response.status !== 200) {
+        // this.setState({
+        //   fileFormStatus: ERROR_FORM_STATUS,
+        // });
+
+        return;
+      }
+      const responseData = await response.json();
+      this.setState({
+        filePath: responseData.path,
+      });
+
+      console.log(this.state);
+    }).catch((/* e */) => {
+      this.setState({
+        fileFormStatus: ERROR_FORM_STATUS,
+      });
+    });
+  }
+
+  checkPhone(formData) {
+    if (!formData.phone || !(validatePhone(formData.phone))) {
+      this.setState({
+        invalidNumber: true,
+      });
+      return false;
+    }
+    return true;
+  }
+
+  render() {
+    return <div>
+      <Wrapper>
+        <FormAnchor name="FormAnchor" />
+        <Background>
+          <Form>
+            <Text>
+              <Header>Оставьте заявку и получите:</Header>
+              <SubHeader>— Расчет в течение 30 минут</SubHeader>
+              <SubHeader>— Помощь в создании макета</SubHeader>
+              <SubHeader>— Консультацию по заказу</SubHeader>
+            </Text>
+            <Fields>
+              <div>
+                <Input
+                  invalidNumber={this.state.invalidNumber}
+                  onChange={this.handleChangeForm}
+                  placeholder="Ваш телефон"
+                  mask="+7 (999) 999-99-99"
+                  name="phone"
+                />
+              </div>
+              <div>
+                <FileLabel>
+                  Прикрепите файл...
+                  <input
+                    name="file"
+                    onChange={this.handleChangeFile}
+                    type="file"
+                  />
+                </FileLabel>
+                <input name="filePath" type="hidden" value={this.state.filePath}/>
+              </div>
+              <div>
+                <Button onClick={(event) => {
+                  event.preventDefault();
+                  if (this.checkPhone(this.state)) {
+                    this.handleClick(this.state)
+                  }
+                }}>Оставить заявку</Button>
+              </div>
+            </Fields>
+          </Form>
+        </Background>
+      </Wrapper>
+    </div>
+  }
+}

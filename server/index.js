@@ -1,4 +1,5 @@
 import React from 'react';
+import bodyParser from 'body-parser';
 import express from 'express';
 import compression from 'compression';
 import { renderToString } from 'react-dom/server';
@@ -7,10 +8,17 @@ import fs from 'fs';
 import path from 'path';
 import './ignore-styles';
 import App from '../src/app';
+import api from './api';
 
 const app = express();
 
 app.use(compression());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.use(express.static(path.resolve(__dirname, '..', 'uploads')));
+
+app.use('/api', api);
 
 app.get('/', (req, res) => {
   const filePath = path.resolve(__dirname, '..', 'public', 'index.html');
@@ -34,9 +42,9 @@ app.get('/', (req, res) => {
     const styleTags = sheet.getStyleTags();
 
     const RenderedApp = htmlData
-      .replace('<style id="serverStyleTags"></style>', styleTags)
-      .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
-      .replace('{{remoteAddress}}', ip)
+      // .replace('<style id="serverStyleTags"></style>', styleTags)
+      // .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
+      // .replace('{{remoteAddress}}', ip)
     ;
 
     res.send(RenderedApp);
