@@ -150,6 +150,7 @@ export default class extends Component {
   }
 
   handleClick(formData) {
+    yaCounter48967208.reachGoal('order');
     fetch('/api/order', {
       method: 'POST',
       headers: {
