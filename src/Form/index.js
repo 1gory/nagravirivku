@@ -60,7 +60,7 @@ const Input = styled(InputMask)`
 const FileLabel = styled.label`
   font-size: 22px;
   color: white;
-  background-color: #3b3b3b;;
+  background-color: ${({fileUploaded}) => (fileUploaded ? '#00bf2a' : '#3b3b3b')};;
   display: inline-block;
   cursor: pointer;
   font-family: 'Roboto',sans-serif;
@@ -132,6 +132,8 @@ export default class extends Component {
 
     this.state = {
       invalidNumber: false,
+      fileUploaded: false,
+      fileLabelText: 'Прикрепите файл...',
       phone: '',
       filePath: ''
     };
@@ -184,7 +186,7 @@ export default class extends Component {
   }
 
   sendFile(file) {
-
+    this.setState({ fileLabelText: 'Файл загружается' });
     const form = new FormData();
     form.append('file', file);
     fetch('/api/file', {
@@ -192,21 +194,24 @@ export default class extends Component {
       body: form,
     }).then(async (response) => {
       if (response.status !== 200) {
-        // this.setState({
-        //   fileFormStatus: ERROR_FORM_STATUS,
-        // });
+        this.setState({
+          fileLabelText: 'Не удалось загрузить файл..',
+        });
 
         return;
       }
       const responseData = await response.json();
       this.setState({
+        fileLabelText: 'Файл загружен!',
+        fileUploaded: true,
         filePath: responseData.path,
+        fileStatus: 'success',
       });
 
       console.log(this.state);
     }).catch((/* e */) => {
       this.setState({
-        fileFormStatus: ERROR_FORM_STATUS,
+        fileLabelText: 'Не удалось загрузить файл..',
       });
     });
   }
@@ -244,8 +249,8 @@ export default class extends Component {
                 />
               </div>
               <div>
-                <FileLabel>
-                  Прикрепите файл...
+                <FileLabel fileUploaded={this.state.fileUploaded}>
+                  {this.state.fileLabelText}
                   <input
                     name="file"
                     onChange={this.handleChangeFile}
