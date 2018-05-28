@@ -22,7 +22,8 @@ app.use('/api', api);
 
 app.get('/', (req, res) => {
   const filePath = path.resolve(__dirname, '..', 'public', 'index.html');
-  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  const ip1 = req.headers['x-forwarded-for'];
+  const ip2 = req.connection.remoteAddress;
   fs.readFile(filePath, 'utf8', (err, htmlData) => {
     if (err) {
       logger.error('read err', err);
@@ -44,7 +45,8 @@ app.get('/', (req, res) => {
     const RenderedApp = htmlData
       .replace('<style id="serverStyleTags"></style>', styleTags)
       .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
-      .replace('{{remoteAddress}}', ip)
+      .replace('{{remoteAddress1}}', ip1)
+      .replace('{{remoteAddress2}}', ip2)
     ;
 
     res.send(RenderedApp);

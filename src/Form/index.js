@@ -184,6 +184,7 @@ export default class extends Component {
   }
 
   sendFile(file) {
+
     const form = new FormData();
     form.append('file', file);
     fetch('/api/file', {
