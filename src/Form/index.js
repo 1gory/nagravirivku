@@ -53,7 +53,7 @@ const Input = styled(InputMask)`
   background-color: ${({invalidNumber}) => (invalidNumber ? '#ff9292' : '#fff' )};
   font-family: 'Roboto',sans-serif;
   font-size: 16px;
-  
+  text-align: center;
   margin-bottom: 10px;
 `;
 
@@ -249,15 +249,15 @@ export default class extends Component {
                 />
               </div>
               <div>
-                <FileLabel fileUploaded={this.state.fileUploaded}>
-                  {this.state.fileLabelText}
-                  <input
-                    name="file"
-                    onChange={this.handleChangeFile}
-                    type="file"
-                  />
-                </FileLabel>
-                <input name="filePath" type="hidden" value={this.state.filePath}/>
+                {/*<FileLabel fileUploaded={this.state.fileUploaded}>*/}
+                  {/*{this.state.fileLabelText}*/}
+                  {/*<input*/}
+                    {/*name="file"*/}
+                    {/*onChange={this.handleChangeFile}*/}
+                    {/*type="file"*/}
+                  {/*/>*/}
+                {/*</FileLabel>*/}
+                {/*<input name="filePath" type="hidden" value={this.state.filePath}/>*/}
               </div>
               <div>
                 <Button onClick={(event) => {
