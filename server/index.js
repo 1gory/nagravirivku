@@ -22,7 +22,7 @@ app.use('/api', api);
 
 app.get('/', (req, res) => {
   const filePath = path.resolve(__dirname, '..', 'public', 'index.html');
-  const ip1 = req.headers['x-forwarded-for'];
+  const ip1 = req.headers['X-Forwarded-For'];
   const ip2 = req.connection.remoteAddress;
   fs.readFile(filePath, 'utf8', (err, htmlData) => {
     if (err) {
