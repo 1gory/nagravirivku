@@ -6,6 +6,7 @@ import { renderToString } from 'react-dom/server';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import fs from 'fs';
 import path from 'path';
+import requestIp from 'request-ip';
 import './ignore-styles';
 import App from '../src/app';
 import api from './api';
@@ -22,12 +23,7 @@ app.use('/api', api);
 
 app.get('/', (req, res) => {
   const filePath = path.resolve(__dirname, '..', 'public', 'index.html');
-  const ip1 = req.headers['X-Forwarded-For'];
-  const ip2 = req.headers['x-forwarded-for'];
-  const ip3 = req.connection.remoteAddress;
-  const ip5 = req.socket.remoteAddress;
-  const ip4 = (req.connection.socket ? req.connection.socket.remoteAddress : null);
-
+  const ip = requestIp.getClientIp(req);
   fs.readFile(filePath, 'utf8', (err, htmlData) => {
     if (err) {
       logger.error('read err', err);
@@ -49,11 +45,7 @@ app.get('/', (req, res) => {
     const RenderedApp = htmlData
       .replace('<style id="serverStyleTags"></style>', styleTags)
       .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
-      .replace('{{remoteAddress1}}', ip1)
-      .replace('{{remoteAddress2}}', ip2)
-      .replace('{{remoteAddress3}}', ip3)
-      .replace('{{remoteAddress4}}', ip4)
-      .replace('{{remoteAddress5}}', ip5)
+      .replace('{{remoteAddress}}', ip)
     ;
 
     res.send(RenderedApp);
