@@ -70,6 +70,8 @@ const FileLabel = styled.label`
   border-radius: 5px;
   padding: 10px 40px;
   box-sizing: border-box;
+  text-align: center;
+  margin-top: 10px;
 
   & input {
     width: 0.1px !important;
@@ -123,7 +125,19 @@ const SubHeader = styled.span`
   }
 `;
 
-// const handleClick
+const FileLink = styled.a`
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+  display: ${({ isFileFieldHided }) => (isFileFieldHided ? 'inline-block' : 'none')};
+  cursor: pointer;
+  text-decoration: underline;
+`;
+
+const FileField = styled.div`
+  display: ${({ isFileFieldHided }) => (isFileFieldHided ? 'none' : 'block')};
+`;
 
 export default class extends Component {
 
@@ -133,6 +147,7 @@ export default class extends Component {
     this.state = {
       invalidNumber: false,
       fileUploaded: false,
+      isFileFieldHided: true,
       fileLabelText: 'Прикрепите файл...',
       phone: '',
       filePath: ''
@@ -140,6 +155,7 @@ export default class extends Component {
 
     this.handleClick = this.handleClick.bind(this);
     this.sendFile = this.sendFile.bind(this);
+    this.hideFileField = this.hideFileField.bind(this);
     this.checkPhone = this.checkPhone.bind(this);
     this.handleChangeForm = this.handleChangeForm.bind(this);
     this.handleChangeFile = this.handleChangeFile.bind(this);
@@ -226,6 +242,10 @@ export default class extends Component {
     return true;
   }
 
+  hideFileField() {
+    this.setState({isFileFieldHided: false});
+  }
+
   render() {
     return <div>
       <Wrapper>
@@ -249,17 +269,6 @@ export default class extends Component {
                 />
               </div>
               <div>
-                {/*<FileLabel fileUploaded={this.state.fileUploaded}>*/}
-                  {/*{this.state.fileLabelText}*/}
-                  {/*<input*/}
-                    {/*name="file"*/}
-                    {/*onChange={this.handleChangeFile}*/}
-                    {/*type="file"*/}
-                  {/*/>*/}
-                {/*</FileLabel>*/}
-                {/*<input name="filePath" type="hidden" value={this.state.filePath}/>*/}
-              </div>
-              <div>
                 <Button onClick={(event) => {
                   event.preventDefault();
                   if (this.checkPhone(this.state)) {
@@ -267,6 +276,24 @@ export default class extends Component {
                   }
                 }}>Оставить заявку</Button>
               </div>
+              <FileField isFileFieldHided={this.state.isFileFieldHided}>
+                <FileLabel fileUploaded={this.state.fileUploaded}>
+                {this.state.fileLabelText}
+                <input
+                name="file"
+                onChange={this.handleChangeFile}
+                type="file"
+                />
+                </FileLabel>
+                <input name="filePath" type="hidden" value={this.state.filePath}/>
+              </FileField>
+              <FileLink
+                isFileFieldHided={this.state.isFileFieldHided}
+                onClick={this.hideFileField}
+                to="#"
+              >
+                Если есть макет, нажмите сюда
+              </FileLink>
             </Fields>
           </Form>
         </Background>

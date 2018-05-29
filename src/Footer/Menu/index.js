@@ -122,13 +122,13 @@ export default () => (
 
     <SocialNetworksIcons>
       <a href="https://vk.com/casplase">
-        <Icon src={vkIcon} />
+        <Icon src={vkIcon} alt="vc" />
       </a>
-      <a href="https://www.instagram.com/casp_lase//">
-        <Icon src={instagramIcon} />
+      <a href="https://instagram.com/casp_lase/">
+        <Icon src={instagramIcon} alt="instagram" />
       </a>
       <a href="tg://resolve?domain=andrew1322">
-        <Icon src={telegramIcon} alt="CASEWOOD YouTube" />
+        <Icon src={telegramIcon} alt="telegram" />
       </a>
     </SocialNetworksIcons>
   </Wrapper>
