@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import H2 from './../Elements/H2';
-import g585 from './585.jpg';
-import broshaker from './broshaker.jpg';
-import casewood from './casewood.jpg';
-import modulbank from './modulbank.jpg';
-import rosautodor from './rosautodor.jpg';
-import barplace from './barplace.jpg';
+import g585 from './585gold.svg';
+import broshaker from './broshaker.svg';
+import casewood from './casewood.svg';
+import modulbank from './modulbank.svg';
+import rosautodor from './rosautodor.svg';
+import barplace from './barplace.svg';
 
 const Wrapper = styled.div`
   padding: 30px 0;

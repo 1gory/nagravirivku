@@ -5,18 +5,23 @@ import Scroll from 'react-scroll';
 import InputMask from 'react-input-mask';
 import H2 from './../Elements/H2';
 import bg from './bg.jpg';
+import bgMin from './bg-min.jpg';
 
 const FormAnchor = Scroll.Element;
 
 const Wrapper = styled.div`
   background: #FFF;
-  background-image: url(${bg});  
   background-size: cover;
+  background-image: url(${bgMin});  
+  
+  @media (min-width: 768px) {
+    background-image: url(${bg});  
+  }
 `;
 
 const Background = styled.div`
   padding: 30px 0;
-  background: rgba(93,95,102,0.80);
+  background: rgba(93,95,102,0.66);
   
   @media (min-width: 768px) {
     padding: 60px 0;
