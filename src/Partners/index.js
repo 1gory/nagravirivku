@@ -41,9 +41,9 @@ export default () => (
         <Img src={casewood}/>
       </div>
       <div>
-        <Img src={modulbank}/>
         <Img src={broshaker}/>
         <Img src={rosautodor}/>
+        <Img src={modulbank}/>
       </div>
     </LogosWrapper>
   </Wrapper>
