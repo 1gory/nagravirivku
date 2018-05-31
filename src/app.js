@@ -23,8 +23,10 @@ export default class extends Component {
 
     this.state = {
       isOpened: false,
+      mapPreloader: true,
     };
 
+    this.handleWaypointEnter = this.handleWaypointEnter.bind(this);
     this.handleOpen = this.handleOpen.bind(this);
     this.handleClose = this.handleClose.bind(this);
   }
@@ -41,6 +43,12 @@ export default class extends Component {
     });
   }
 
+  handleWaypointEnter() {
+    this.setState({
+      mapPreloader: false,
+    });
+  }
+
   render() {
       return <Wrapper>
           <OrderPopUp isOpened={this.state.isOpened} handleClose={this.handleClose} />
@@ -48,12 +56,12 @@ export default class extends Component {
           <Video/>
           <Form handleOpen={this.handleOpen}/>
           <Materials />
-          <Price />
+          <Price handleScroll={this.handleWaypointEnter} />
           <Equipment />
           <Gallery />
           <Partners />
           <About />
-          <Footer />
+          <Footer mapPreloader={this.state.mapPreloader} />
       </Wrapper>
   }
 };

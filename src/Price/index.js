@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Scroll from 'react-scroll';
+import Waypoint from 'react-waypoint';
 import H2 from './../Elements/H2';
 
 const PriceAnchor = Scroll.Element;
@@ -93,9 +94,10 @@ const DescriptionWrapper = styled.div`
   }
 `;
 
-export default () => (
+export default ({ handleScroll }) => (
   <Wrapper>
     <PriceAnchor name="PriceAnchor" />
+    <Waypoint onEnter={handleScroll} />
     <Header>Цены</Header>
     <PriceGroup>
       <Name>Лазерная гравировка</Name>
