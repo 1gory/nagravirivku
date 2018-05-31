@@ -99,8 +99,8 @@ const Text = styled.div`
 `;
 
 const Fields = styled.div`
-
   @media (min-width: 768px) {
+    padding-top: 25px;
     width: 450px;
   }
 `;
@@ -259,9 +259,9 @@ export default class extends Component {
           <Form>
             <Text>
               <Header>Оставьте заявку и получите:</Header>
+              <SubHeader>— Скидку в 30% на первый заказ</SubHeader>
               <SubHeader>— Расчет в течение 30 минут</SubHeader>
               <SubHeader>— Помощь в создании макета</SubHeader>
-              <SubHeader>— Консультацию по заказу</SubHeader>
             </Text>
             <Fields>
               <div>

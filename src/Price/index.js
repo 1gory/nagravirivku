@@ -74,6 +74,25 @@ const Col = styled.div`
   }
 `;
 
+const Description = styled.span` 
+  font-family: 'Roboto-Light', sans-serif;
+  display: inline-block;
+  padding: 0 20px;
+  padding-top: 30px;
+  
+  @media(min-width: 768px) {
+    padding-top: 40px;
+  }
+`;
+
+const DescriptionWrapper = styled.div` 
+  text-align: left;
+  
+  @media(min-width: 768px) {
+    text-align: center;
+  }
+`;
+
 export default () => (
   <Wrapper>
     <PriceAnchor name="PriceAnchor" />
@@ -125,5 +144,11 @@ export default () => (
         </Prices>
       </Values>
     </PriceGroup>
+
+    <DescriptionWrapper>
+      <Description>
+        Минимальный розничный заказ - 500 рублей
+      </Description>
+    </DescriptionWrapper>
   </Wrapper>
 );
