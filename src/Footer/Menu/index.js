@@ -101,7 +101,7 @@ export default () => (
         <MenuLink onClick={() => (handleClick('MaterialsAnchor'))}>Материалы</MenuLink>
         <MenuLink onClick={() => (handleClick('PriceAnchor'))}>Цены</MenuLink>
         <MenuLink onClick={() => (handleClick('GalleryAnchor'))}>Галерея</MenuLink>
-        <MenuLink onClick={() => (handleClick('AboutAnchor'))}>О нас</MenuLink>
+        <MenuLink onClick={() => (handleClick('AboutAnchor'))}>О компании</MenuLink>
       </FooterMenu>
       <PaymentIcons>
         <PaymentServiceLogo src={visa} alt="Оплата картой visa" />
