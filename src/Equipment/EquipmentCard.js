@@ -20,14 +20,14 @@ const Background = styled.div`
 
 const Name = styled.h3`
   color: #fff;
-  font-family: 'Lato-Regular',sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: bolder;
 `;
 
 const Description = styled.p`
   opacity: 0.7;
-  font-family: 'Lato-Light',sans-serif;
+  font-family: 'Roboto-Light', sans-serif;
   color: #fff;
   margin: 0;
   padding: 0 30px;

@@ -15,7 +15,7 @@ const SendButton = styled.button`
   border-radius: 20px;
   background-color: #3b3b3b;
   color: #ffffff;
-  font-family: 'Lato-Regular';
+  font-family: 'Roboto', sans-serif;
   padding: 10px 50px;
   margin: 20px;
   background-color: ${({ disabled }) => (disabled ? '#797979' : '#3b3b3b')}

@@ -30,15 +30,15 @@ const MenuWrapper = styled.div`
 
 const MenuLink = styled.a`
   cursor: pointer;
-  text-align: center;
   text-decoration: none;
   color: #fff;
   font-family: 'Roboto-Light', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.88em;
+  display: inline-block;
 
   @media (min-width: 768px) {
-    display: inline-block;
+    font-size: 16px;
     padding-left: 25px;
   }
 `;

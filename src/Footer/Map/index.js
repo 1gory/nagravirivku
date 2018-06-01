@@ -45,7 +45,7 @@ const Location = styled.div`
 `;
 
 const Label = styled.div`
-  font-family: 'Lato-Regular';
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: rgba(59, 59, 59, 0.5);
   font-size: 12px;
@@ -54,7 +54,7 @@ const Label = styled.div`
 `;
 
 const Address = styled.div`
-  font-family: 'Lato-Regular';
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #3b3b3b;
 `;
