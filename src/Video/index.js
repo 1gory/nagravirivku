@@ -11,6 +11,8 @@ const opt = {
 };
 
 const VideoWrapper = styled.div`
+  padding: 10px;
+  
   @media (min-width: 768px) {
     max-width: 992px;
     margin: 0 auto;
