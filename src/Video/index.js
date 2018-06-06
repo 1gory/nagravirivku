@@ -1,82 +1,67 @@
 import React from 'react';
+import YouTube from 'react-youtube';
 import styled from 'styled-components';
-import video from './video.mp4';
-import pixel from './pixel.png'
+import { Row, Col } from 'react-flexbox-grid';
+import H2 from '../Elements/H2';
+
+const opt = {
+  playerVars: { // https://developers.google.com/youtube/player_parameters
+    rel: 0,
+  },
+};
+
+const VideoWrapper = styled.div`
+  @media (min-width: 768px) {
+    max-width: 992px;
+    margin: 0 auto;
+  }
+`;
+
+const YouTubeVideo = styled(YouTube)`
+  width: 100%;
+`;
 
 const Wrapper = styled.div`
-  width: 100%;
-  position:relative;
-  height: 400px;
-  overflow: hidden;
-`;
-
-const Video = styled.video`
-  position: absolute;
-  top: 50%; 
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  min-width: 100%; 
-  min-height: 100%; 
-  width: auto; 
-  height: auto;
-  z-index: -1000; 
-  overflow: hidden;
-`;
-
-const Pixel = styled.div`
-  width: 100%;
-  height: inherit;
-  position: absolute;
-  background-image: url(${pixel});
-`;
-
-const Mask = styled.div`
-  width: 100%;
-  height: inherit;
-  position: absolute;
   background: #000;
-  opacity: 0.3;
+  padding-top: 30px;
+  padding-bottom: 60px;
 `;
 
-const Text = styled.div`
-  width: 100%;
-  padding-top: 110px;
-  position: absolute;
-  color: #fff;
+const Header = styled(H2)`
   text-align: center;
-  
-  @media(min-width: 768px) {
-    padding-top: 70px;
-  }
-`;
-
-const H1 = styled.h1`
-  font-size: 32px;
-  font-family: 'Roboto-Light', sans-serif;
-  
-  @media(min-width: 768px) {
-    font-size: 48px;
-  }
-`;
-
-const SubHeader = styled.span`
-  font-family: 'Roboto', sans-serif;
-  font-size: 48px;
+  color: #fff;
 `;
 
 export default () => (
   <Wrapper>
-    <Pixel />
-    <Mask />
-    <Text>
-      <H1>
-        Лазерная гравировка, <br />резка, УФ-печать
-        <SubHeader><br />в Москве</SubHeader>
-      </H1>
-    </Text>
-    <Video autoPlay playsInline muted loop>
-      <source src={video} type="video/mp4" />
-    </Video>
+    <Header>Видео</Header>
+    <VideoWrapper>
+      <Row>
+        <Col xs={12} sm={12} md={6} lg={6}>
+          <YouTubeVideo
+            videoId="GIGAtuKlxpM"
+            opts={opt}
+          />
+        </Col>
+        <Col xs={12} sm={12} md={6} lg={6}>
+          <YouTubeVideo
+            videoId="exhDGJ0MaB0"
+            opts={opt}
+          />
+        </Col>
+        <Col xs={12} sm={12} md={6} lg={6}>
+          <YouTubeVideo
+            videoId="CTZd9sPxyHg"
+            opts={opt}
+          />
+        </Col>
+        <Col xs={12} sm={12} md={6} lg={6}>
+          <YouTubeVideo
+            videoId="Z5XBgr88_-I"
+            opts={opt}
+          />
+        </Col>
+      </Row>
+    </VideoWrapper>
   </Wrapper>
 )

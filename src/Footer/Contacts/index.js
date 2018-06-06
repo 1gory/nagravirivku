@@ -8,8 +8,6 @@ import contactsPhone from './contact-phone.svg';
 import contactsMessenger from './contact-messengers.svg';
 import logowhite from './logowhite.svg';
 
-// const ContactsAnchor = Scroll.Element;
-
 const Wrapper = styled.div`
   background-color: #3b3b3b;
   position: relative;
@@ -120,6 +118,7 @@ export default () => (
           label="Email"
           info="info@casplase.ru"
           href="mailto:info@casplase.ru"
+          onClick={() => (yaCounter48967208.reachGoal('mail'))}
         />
         <Contact
           icon={contactsPhone}

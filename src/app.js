@@ -2,12 +2,13 @@ import 'babel-polyfill';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from './Header';
-import Video from './Video';
+import Banner from './Banner';
 import Form from './Form';
 import Materials from './Materials';
 import Price from './Price';
 import Equipment from './Equipment';
 import Gallery from './Gallery';
+import Video from './Video';
 import Partners from './Partners';
 import About from './About';
 import Footer from './Footer';
@@ -53,12 +54,13 @@ export default class extends Component {
       return <Wrapper>
           <OrderPopUp isOpened={this.state.isOpened} handleClose={this.handleClose} />
           <Header/>
-          <Video/>
+          <Banner/>
           <Form handleOpen={this.handleOpen}/>
           <Materials />
           <Price handleScroll={this.handleWaypointEnter} />
           <Equipment />
           <Gallery />
+          <Video />
           <Partners />
           <About />
           <Footer mapPreloader={this.state.mapPreloader} />

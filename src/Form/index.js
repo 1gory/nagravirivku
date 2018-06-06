@@ -259,7 +259,7 @@ export default class extends Component {
           <Form>
             <Text>
               <Header>Оставьте заявку и получите:</Header>
-              <SubHeader>— Скидку в 30% на первый заказ</SubHeader>
+              <SubHeader>— Скидку в 10% на первый заказ</SubHeader>
               <SubHeader>— Расчет в течение 30 минут</SubHeader>
               <SubHeader>— Помощь в создании макета</SubHeader>
             </Text>

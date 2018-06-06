@@ -4,6 +4,7 @@ import Scroll from 'react-scroll';
 import instagramIcon from '../Social/contact-social-insta.svg';
 import vkIcon from '../Social/contact-social-vk.svg';
 import telegramIcon from '../Social/contact-social-telegram.svg';
+import youtubeIcon from '../Social/contact-social-youtube.svg';
 import visa from '../Payments/visa.svg';
 import maestro from '../Payments/maestro.svg';
 import mastecard from '../Payments/mastercard.svg';
@@ -122,13 +123,16 @@ export default () => (
 
     <SocialNetworksIcons>
       <a href="https://vk.com/casplase">
-        <Icon src={vkIcon} alt="vc" />
+        <Icon src={vkIcon} alt="nagravirovku vkontakte" onClick={() => (yaCounter48967208.reachGoal('vk'))} />
       </a>
       <a href="https://instagram.com/casp_lase/">
-        <Icon src={instagramIcon} alt="instagram" />
+        <Icon src={instagramIcon} alt="nagravirovku instagram" onClick={() => (yaCounter48967208.reachGoal('instagram'))} />
+      </a>
+      <a href="https://www.youtube.com/channel/UC2-rv4pDPmTUdjvl5GUBJsA">
+        <Icon src={youtubeIcon} alt="Casp Lase YouTube" onClick={() => (yaCounter48967208.reachGoal('youtube'))} />
       </a>
       <a href="tg://resolve?domain=andrew1322">
-        <Icon src={telegramIcon} alt="telegram" />
+        <Icon src={telegramIcon} alt="nagravirovku telegram" />
       </a>
     </SocialNetworksIcons>
   </Wrapper>
