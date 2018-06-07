@@ -39,27 +39,27 @@ export default () => (
     <Header>Видео</Header>
     <VideoWrapper>
       <Row>
-        <Col xs={12} sm={12} md={6} lg={6}>
+        <Col xs={6} sm={6} md={6} lg={6}>
           <YouTubeVideo
-            videoId="GIGAtuKlxpM"
+            videoId="NIsNvU9Ek_g"
             opts={opt}
           />
         </Col>
-        <Col xs={12} sm={12} md={6} lg={6}>
+        <Col xs={6} sm={6} md={6} lg={6}>
           <YouTubeVideo
-            videoId="exhDGJ0MaB0"
+            videoId="r686d-I89NE"
             opts={opt}
           />
         </Col>
-        <Col xs={12} sm={12} md={6} lg={6}>
+        <Col xs={6} sm={6} md={6} lg={6}>
           <YouTubeVideo
-            videoId="CTZd9sPxyHg"
+            videoId="DDXp8psesLU"
             opts={opt}
           />
         </Col>
-        <Col xs={12} sm={12} md={6} lg={6}>
+        <Col xs={6} sm={6} md={6} lg={6}>
           <YouTubeVideo
-            videoId="Z5XBgr88_-I"
+            videoId="VWBwtZLOvWU"
             opts={opt}
           />
         </Col>
