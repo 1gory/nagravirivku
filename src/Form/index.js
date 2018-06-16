@@ -43,11 +43,19 @@ const Button = styled.button`
   height: 56px;
   padding: 10px 40px;
   color:#ffffff;
-  background-color:#d92518;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   font-family: 'Roboto',sans-serif;
+  
+  // Change the color to separate the buttons
+  background-color:#a2281f;
+  
+  @media (min-width: 768px) {
+    background-color:#d92518;
+    display: flex;
+    max-width: 800px;
+  }
 `;
 
 const Input = styled(InputMask)`
@@ -143,6 +151,29 @@ const FileLink = styled.a`
 const FileField = styled.div`
   display: ${({ isFileFieldHided }) => (isFileFieldHided ? 'none' : 'block')};
 `;
+
+const CallWrapper = styled.div`
+  padding: 35px 0 20px 0;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const CallButtonDescription = styled.div`
+  padding: 10px 0;
+  text-align: center;
+  font-family: 'Roboto-Light', sans-serif;
+  font-size: 18px;
+  color: #fff;
+`;
+
+const CallButton = styled(Button)`
+  background-color:#d92518;
+  font-size: 20px;
+`;
+
+
 
 export default class extends Component {
 
@@ -300,6 +331,20 @@ export default class extends Component {
                 Если есть макет, нажмите сюда
               </FileLink>
             </Fields>
+
+            <CallWrapper>
+              <CallButtonDescription>
+                Нет времени ждать?
+              </CallButtonDescription>
+              <CallButton
+                onClick={(event) => {
+                  event.preventDefault();
+                  document.location.href = 'tel:+79030069990';
+                  yaCounter48967208.reachGoal('phone')}
+                }>
+                Позвонить!
+              </CallButton>
+            </CallWrapper>
           </Form>
         </Background>
       </Wrapper>
