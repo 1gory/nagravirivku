@@ -53,8 +53,6 @@ const Button = styled.button`
   
   @media (min-width: 768px) {
     background-color:#d92518;
-    display: flex;
-    max-width: 800px;
   }
 `;
 
@@ -172,8 +170,6 @@ const CallButton = styled(Button)`
   background-color:#d92518;
   font-size: 20px;
 `;
-
-
 
 export default class extends Component {
 
