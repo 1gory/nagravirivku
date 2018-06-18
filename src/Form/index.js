@@ -335,8 +335,9 @@ export default class extends Component {
               <CallButton
                 onClick={(event) => {
                   event.preventDefault();
+                  yaCounter48967208.reachGoal('phone');
                   document.location.href = 'tel:+79030069990';
-                  yaCounter48967208.reachGoal('phone')}
+                  }
                 }>
                 Позвонить!
               </CallButton>
