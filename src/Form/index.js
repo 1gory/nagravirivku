@@ -79,10 +79,11 @@ const Background = styled.div`
 
 const Form = styled.form`
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
   
   @media (min-width: 768px) {
     display: flex;
+    padding: 0 30px;
     max-width: 800px;
   }
 `;
@@ -345,7 +346,7 @@ export default class extends Component {
           <Form>
             <Text>
               <Header>Оставьте заявку и мы:</Header>
-              <SubHeader>— Рассчитаем стоимость течение 30 мин.</SubHeader>
+              <SubHeader>— Рассчитаем стоимость в течение 30 мин.</SubHeader>
               <SubHeader>— Подготовим бесплатные образцы</SubHeader>
               <SubHeader>— Окажем помощь в подготовке макета</SubHeader>
             </Text>
