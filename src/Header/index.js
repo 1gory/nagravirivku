@@ -10,11 +10,32 @@ const Wrapper = styled.div`
   z-index: 1;
 `;
 
+const HeaderWrapper = styled.div`
+  // display: none;
+  width: 100%;
+  
+  @media(min-width: 768px) {
+    padding-left: 20px;
+    display: block;
+  }
+`;
+
+const H1 = styled.h1`
+  text-align: left;
+  font-size: 12px;
+  font-family: 'Roboto-Light', sans-serif;
+  
+  @media(min-width: 768px) {
+    font-size: 18px;
+  }
+`;
+
 const Menu = styled.div`
   max-width: 1170px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const Logo = styled.img`
@@ -23,12 +44,14 @@ const Logo = styled.img`
 `;
 
 const Contacts = styled.div`
-  padding: 20px;
+  white-space: nowrap;
+  padding: 0px;
   font-family: 'Roboto-Light', sans-serif;
   font-size: 12px;
   
   @media(min-width: 768px) {
     font-size: 14px;
+    padding: 20px;
   }
 `;
 
@@ -55,7 +78,12 @@ export default () => (
   <div>
     <Wrapper>
       <Menu>
-        <Logo src={logo} />
+        <Logo src={logo}/>
+        <HeaderWrapper>
+          <H1>
+            Лазерная гравировка,<Br /> резка, УФ-печать
+          </H1>
+        </HeaderWrapper>
         <Contacts>
           <Phone href="tel:+79030069990" onClick={() => (yaCounter48967208.reachGoal('phone'))}>
             +7 (903) 006-99-90

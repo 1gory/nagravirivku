@@ -4,10 +4,59 @@ import validatePhone from '../functuons/validatePhone';
 import Scroll from 'react-scroll';
 import InputMask from 'react-input-mask';
 import H2 from './../Elements/H2';
-import bg from './bg.jpg';
-import bgMin from './bg-min.jpg';
+import bg from './background.jpg';
+import bgMin from './background-min.jpg';
 
 const FormAnchor = Scroll.Element;
+
+const MainText = styled.div`
+  width: 100%;
+  padding-top: 110px;
+  // position: absolute;
+  color: #fff;
+  text-align: center;
+  
+  @media(min-width: 768px) {
+    padding-top: 35px;
+  }
+`;
+
+const MainSubHeader = styled.span`
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+`;
+
+const Br = styled.br`
+  @media(min-width: 768px) {
+    display: none;
+  }
+`;
+
+const OfferText = styled(H2)`
+  font-size: 28px;
+  color: #fff;
+  padding: 0;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  padding-top: 60px
+  text-align: center;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
+  
+  @media (min-width: 768px) {
+    font-size: 38px;
+    margin: 0;
+    padding-bottom: 40px;
+    padding-top: 120px;
+  }
+`;
+
+const SubOffer = styled.span`
+  font-size: 32px;
+    
+  @media (min-width: 768px) {
+    font-size: 42px;
+  }
+`;
 
 const Wrapper = styled.div`
   background: #FFF;
@@ -21,7 +70,7 @@ const Wrapper = styled.div`
 
 const Background = styled.div`
   padding: 30px 0;
-  background: rgba(93,95,102,0.66);
+  // background: rgba(93,95,102,0.66);
   
   @media (min-width: 768px) {
     padding: 60px 0;
@@ -98,6 +147,7 @@ const FileLabel = styled.label`
 
 const Text = styled.div`
   padding-bottom: 20px;
+  text-shadow: 1px 1px 2px black, 0 0 1em black;
   
   @media (min-width: 768px) {
     width: 700px;
@@ -281,14 +331,23 @@ export default class extends Component {
   render() {
     return <div>
       <Wrapper>
+        {/*<MainText>*/}
+          {/*<H1>*/}
+            {/*Лазерная гравировка, резка, УФ-печать*/}
+            {/*<MainSubHeader> в Москве</MainSubHeader>*/}
+          {/*</H1>*/}
+        {/*</MainText>*/}
+        <OfferText>
+          Качественно выполним<Br /> Ваш заказ в срок <SubOffer><br />или вернём деньги</SubOffer>
+        </OfferText>
         <FormAnchor name="FormAnchor" />
         <Background>
           <Form>
             <Text>
-              <Header>Оставьте заявку и получите:</Header>
-              <SubHeader>— Скидку в 10% на первый заказ</SubHeader>
-              <SubHeader>— Расчет в течение 30 минут</SubHeader>
-              <SubHeader>— Помощь в создании макета</SubHeader>
+              <Header>Оставьте заявку и мы:</Header>
+              <SubHeader>— Рассчитаем стоимость течение 30 мин.</SubHeader>
+              <SubHeader>— Подготовим бесплатные образцы</SubHeader>
+              <SubHeader>— Окажем помощь в подготовке макета</SubHeader>
             </Text>
             <Fields>
               <div>

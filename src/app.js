@@ -2,7 +2,6 @@ import 'babel-polyfill';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Header from './Header';
-import Banner from './Banner';
 import Form from './Form';
 import Materials from './Materials';
 import Price from './Price';
@@ -54,7 +53,6 @@ export default class extends Component {
       return <Wrapper>
           <OrderPopUp isOpened={this.state.isOpened} handleClose={this.handleClose} />
           <Header/>
-          <Banner/>
           <Form handleOpen={this.handleOpen}/>
           <Materials />
           <Price handleScroll={this.handleWaypointEnter} />
