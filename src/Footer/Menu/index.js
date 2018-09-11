@@ -122,7 +122,7 @@ export default () => (
     </Requisites>
 
     <SocialNetworksIcons>
-      <a href="https://vk.com/casplase" target="_blank">
+      <a href="https://vk.com/lazernaya__rezka" target="_blank">
         <Icon src={vkIcon} alt="nagravirovku vkontakte" onClick={() => (yaCounter48967208.reachGoal('vk'))} />
       </a>
       <a href="https://instagram.com/casp_lase/" target="_blank">

@@ -366,7 +366,7 @@ export default class extends Component {
                   if (this.checkPhone(this.state)) {
                     this.handleClick(this.state)
                   }
-                }}>Оставить заявку</Button>
+                }}>Рассчитать стоимость заказа</Button>
               </div>
               <FileField isFileFieldHided={this.state.isFileFieldHided}>
                 <FileLabel fileUploaded={this.state.fileUploaded}>

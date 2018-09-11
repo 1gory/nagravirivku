@@ -149,7 +149,7 @@ export default ({ handleScroll }) => (
 
     <DescriptionWrapper>
       <Description>
-        Минимальный розничный заказ - 500 руб.
+        Стоимость минимального заказа - 1000 руб.
       </Description>
     </DescriptionWrapper>
   </Wrapper>
