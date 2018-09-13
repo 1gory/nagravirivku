@@ -39,28 +39,52 @@ export default () => (
     <Header>Видео</Header>
     <VideoWrapper>
       <Row>
-        <Col xs={6} sm={6} md={6} lg={6}>
+        <Col xs={6} sm={6} md={3} lg={3}>
           <YouTubeVideo
-            videoId="NIsNvU9Ek_g"
+            videoId="GPwQ7fR62PE"
             opts={opt}
           />
         </Col>
-        <Col xs={6} sm={6} md={6} lg={6}>
+        <Col xs={6} sm={6} md={3} lg={3}>
           <YouTubeVideo
             videoId="r686d-I89NE"
             opts={opt}
           />
         </Col>
-        <Col xs={6} sm={6} md={6} lg={6}>
+        <Col xs={6} sm={6} md={3} lg={3}>
           <YouTubeVideo
-            videoId="DDXp8psesLU"
+            videoId="uagsCX4ll-4"
             opts={opt}
           />
         </Col>
-        <Col xs={6} sm={6} md={6} lg={6}>
+        <Col xs={6} sm={6} md={3} lg={3}>
           <YouTubeVideo
-            videoId="VWBwtZLOvWU"
+            videoId="Z5XBgr88_-I"
             opts={opt}
+          />
+        </Col>
+        <Col xs={6} sm={6} md={3} lg={3}>
+          <YouTubeVideo
+              videoId="CTZd9sPxyHg"
+              opts={opt}
+          />
+        </Col>
+        <Col xs={6} sm={6} md={3} lg={3}>
+          <YouTubeVideo
+              videoId="L6Tk3qcI3MQ"
+              opts={opt}
+          />
+        </Col>
+        <Col xs={6} sm={6} md={3} lg={3}>
+          <YouTubeVideo
+              videoId="DDXp8psesLU"
+              opts={opt}
+          />
+        </Col>
+        <Col xs={6} sm={6} md={3} lg={3}>
+          <YouTubeVideo
+              videoId="VWBwtZLOvWU"
+              opts={opt}
           />
         </Col>
       </Row>
