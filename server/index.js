@@ -40,11 +40,11 @@ app.get('/', (req, res) => {
 
     const styleTags = sheet.getStyleTags();
 
-    const RenderedApp = process.env.NODE_ENV === 'development' ?
-      htmlData : htmlData
+    const RenderedApp = process.env.NODE_ENV === 'production' ?
+      htmlData
       .replace('<style id="serverStyleTags"></style>', styleTags)
       .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
-      .replace('{{remoteAddress}}', ip)
+      .replace('{{remoteAddress}}', ip) : htmlData;
     ;
 
     res.send(RenderedApp);

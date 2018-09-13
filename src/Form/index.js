@@ -108,7 +108,7 @@ const Button = styled.button`
 
 const Input = styled(InputMask)`
   width: 100%;
-  padding: 10px 40px;
+  padding: 10px 35px;
   border: none;
   border-radius: 5px;
   background-color: ${({invalidNumber}) => (invalidNumber ? '#ff9292' : '#fff' )};
@@ -358,6 +358,13 @@ export default class extends Component {
                   placeholder="Ваш телефон"
                   mask="+7 (999) 999-99-99"
                   name="phone"
+                />
+              </div>
+              <div>
+                <Input
+                    onChange={this.handleChangeForm}
+                    placeholder="Комментарий (не обязательно)"
+                    name="comment"
                 />
               </div>
               <div>
