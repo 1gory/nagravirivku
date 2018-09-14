@@ -80,6 +80,30 @@ const images =
           thumbnailWidth: 300,
           thumbnailHeight: 300,
       },
+      {
+          src: '/gallery/13.jpg',
+          thumbnail: '/gallery/thumbnail/13.jpg',
+          thumbnailWidth: 300,
+          thumbnailHeight: 300,
+      },
+      {
+          src: '/gallery/14.jpg',
+          thumbnail: '/gallery/thumbnail/14.jpg',
+          thumbnailWidth: 300,
+          thumbnailHeight: 300,
+      },
+      {
+          src: '/gallery/15.jpg',
+          thumbnail: '/gallery/thumbnail/15.jpg',
+          thumbnailWidth: 300,
+          thumbnailHeight: 300,
+      },
+      {
+          src: '/gallery/16.jpg',
+          thumbnail: '/gallery/thumbnail/16.jpg',
+          thumbnailWidth: 300,
+          thumbnailHeight: 300,
+      },
   ];
 
 
