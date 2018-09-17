@@ -97,9 +97,14 @@ const Button = styled.button`
   border-radius: 5px;
   font-size: 26px;
   font-family: 'Roboto',sans-serif;
+  cursor: pointer;
   
   // Change the color to separate the buttons
   background-color:#a2281f;
+  
+  &:hover {
+    background-color: #f00;
+  }
   
   @media (min-width: 768px) {
     background-color:#d92518;
