@@ -60,10 +60,10 @@ export default props => (
   <Wrapper isOpened={props.isOpened}>
     <Popup>
       <WrapperH3>
-        <H3>Спасибо!</H3>
+        <H3>Спасибо, заявка принята!</H3>
         <StyledImg onClick={props.handleClose} src={modalClose} />
       </WrapperH3>
-      <Text>Мы свяжемся с Вами как можно скорее!</Text>
+      <Text>Перезвоним вам через 5 минут!</Text>
     </Popup>
   </Wrapper>
 );

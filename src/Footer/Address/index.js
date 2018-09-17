@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 const H2 = styled.h2`
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
-  color: #9d9d9d;
+  color: #000;
 `;
 
 const Description = styled.p`
@@ -27,7 +27,7 @@ export default () => (
   <Wrapper>
     <H2>Наш адрес</H2>
     <Description>
-      Мы находимся в г.Москва, Алтуфьевское шоссе д.5. Это в пешей доступности от станции метро «Владыкино» или от станции МЦК «Окружная».
+        г.Москва, Алтуфьевское шоссе д.5. <br/> 5 минут от м.«Владыкино» или 7 минут от МЦК «Окружная».
     </Description>
   </Wrapper>
 );

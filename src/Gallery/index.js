@@ -143,7 +143,7 @@ export default () => (
   <Wrapper>
     <GalleryAnchor name="GalleryAnchor" />
     <GalleryWrapper>
-      <Header>Примеры работ</Header>
+        <Header>Примеры работ</Header>
       <GalleryContent>
         <Gallery images={images} enableImageSelection={false} rowHeight={300}/>
         <ClearBlock />

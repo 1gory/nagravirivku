@@ -65,9 +65,9 @@ const Info = styled.a`
 `;
 
 const LeaveMessageButton = styled.button`
-  background-color: #3b3b3b;
+  background-color: #d92518;
   cursor: pointer;
-  border: solid 1px #fff;
+  border: solid 1px #272727;
   border-radius: 20px;
   font-family: 'Roboto-Light', sans-serif;
   font-size: 16px;
@@ -75,6 +75,7 @@ const LeaveMessageButton = styled.button`
   color: #fff
   
   margin: 15px;
+  
 `;
 
 const Logo = styled.img`
@@ -133,7 +134,7 @@ export default () => (
           href="whatsapp://send?text=Здравствуйте!&phone=+79030069990"
         />
       </Contacts>
-      <LeaveMessageButton onClick={handleClick}>Оставить сообщение</LeaveMessageButton>
+      <LeaveMessageButton onClick={handleClick}>Оставьте заявку</LeaveMessageButton>
     </ContactsWrapper>
   </Wrapper>
 );

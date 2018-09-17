@@ -95,7 +95,7 @@ const Button = styled.button`
   color:#ffffff;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 26px;
   font-family: 'Roboto',sans-serif;
   
   // Change the color to separate the buttons
@@ -334,21 +334,21 @@ export default class extends Component {
       <Wrapper>
         {/*<MainText>*/}
           {/*<H1>*/}
-            {/*Лазерная гравировка, резка, УФ-печать*/}
+            {/*Лазерная резка, гравировка, УФ-печать*/}
             {/*<MainSubHeader> в Москве</MainSubHeader>*/}
           {/*</H1>*/}
         {/*</MainText>*/}
         <OfferText>
-          Качественно выполним<Br /> Ваш заказ в срок <SubOffer><br />или вернём деньги</SubOffer>
+          <small>ВЫПОЛНИМ<Br /> ЛАЗЕРНУЮ РЕЗКУ, ГРАВИРОВКУ, УФ-ПЕЧАТЬ</small><SubOffer><br />ВЫ ОСТАНЕТЕСЬ ДОВОЛЬНЫ!</SubOffer>
         </OfferText>
         <FormAnchor name="FormAnchor" />
         <Background>
           <Form>
             <Text>
-              <Header>Оставьте заявку и мы:</Header>
-              <SubHeader>— Рассчитаем стоимость в течение 30 мин.</SubHeader>
-              <SubHeader>— Подготовим бесплатные образцы</SubHeader>
-              <SubHeader>— Окажем помощь в подготовке макета</SubHeader>
+              <Header>Оставьте заявку:</Header>
+              <SubHeader>— Расчет стоимости за 27 минут</SubHeader>
+              <SubHeader>— Бесплатные образцы</SubHeader>
+              <SubHeader>— Подготовим макет</SubHeader>
             </Text>
             <Fields>
               <div>
@@ -373,7 +373,7 @@ export default class extends Component {
                   if (this.checkPhone(this.state)) {
                     this.handleClick(this.state)
                   }
-                }}>Рассчитать стоимость заказа</Button>
+                }}>Заказать</Button>
               </div>
               <FileField isFileFieldHided={this.state.isFileFieldHided}>
                 <FileLabel fileUploaded={this.state.fileUploaded}>
@@ -391,7 +391,7 @@ export default class extends Component {
                 onClick={this.hideFileField}
                 to="#"
               >
-                Если есть макет, нажмите сюда
+                Есть макет, нажмите сюда
               </FileLink>
             </Fields>
 

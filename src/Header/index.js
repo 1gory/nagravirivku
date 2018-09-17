@@ -58,6 +58,7 @@ const Contacts = styled.div`
 const Phone = styled.a`
   color: black;
   padding-right: 15px;
+  font-size: 19px;
 `;
 
 const Mail = styled.a`
@@ -81,12 +82,14 @@ export default () => (
         <Logo src={logo}/>
         <HeaderWrapper>
           <H1>
-            Лазерная гравировка,<Br /> резка, УФ-печать
+            Лазерная резка,<Br /> гравировка, УФ-печать
           </H1>
         </HeaderWrapper>
+        Круглосуточно <Br />прием заявок
         <Contacts>
+
           <Phone href="tel:+79030069990" onClick={() => (yaCounter48967208.reachGoal('phone'))}>
-            +7 (903) 006-99-90
+            <strong>+7 (903) 006-99-90</strong>
           </Phone>
           <Br />
           <Mail href="mailto:info@casplase.ru" onClick={() => (yaCounter48967208.reachGoal('mail'))}>

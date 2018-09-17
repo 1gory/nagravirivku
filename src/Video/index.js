@@ -36,7 +36,7 @@ const Header = styled(H2)`
 
 export default () => (
   <Wrapper>
-    <Header>Видео</Header>
+    <Header>Посмотреть видео</Header>
     <VideoWrapper>
       <Row>
         <Col xs={6} sm={6} md={3} lg={3}>

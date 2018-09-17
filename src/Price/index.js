@@ -94,6 +94,7 @@ const DescriptionWrapper = styled.div`
   }
 `;
 
+
 export default ({ handleScroll }) => (
   <Wrapper>
     <PriceAnchor name="PriceAnchor" />
@@ -108,9 +109,9 @@ export default ({ handleScroll }) => (
           <Col>от 10 ед.</Col>
         </Count>
         <Prices>
-          <Col>от 3.5 руб/см<sup>2</sup></Col>
-          <Col>от 3.8 руб/см<sup>2</sup></Col>
-          <Col>от 4.5 руб/см<sup>2</sup></Col>
+          <Col>3.5 руб/см<sup>2</sup></Col>
+          <Col>3.8 руб/см<sup>2</sup></Col>
+          <Col>5 руб/см<sup>2</sup></Col>
         </Prices>
       </Values>
     </PriceGroup>
@@ -149,7 +150,7 @@ export default ({ handleScroll }) => (
 
     <DescriptionWrapper>
       <Description>
-        Стоимость минимального заказа - 1000 руб.
+        *Стоимость минимального заказа - 1000 руб.
       </Description>
     </DescriptionWrapper>
   </Wrapper>

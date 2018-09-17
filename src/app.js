@@ -56,9 +56,10 @@ export default class extends Component {
           <Form handleOpen={this.handleOpen}/>
           <Materials />
           <Price handleScroll={this.handleWaypointEnter} />
-          <Equipment />
           <Gallery />
           <Video />
+          <Equipment />
+          <Form handleOpen={this.handleOpen}/>
           <Partners />
           <About />
           <Footer mapPreloader={this.state.mapPreloader} />
