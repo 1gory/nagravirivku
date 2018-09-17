@@ -7,7 +7,7 @@ import H2 from './../Elements/H2';
 const PriceAnchor = Scroll.Element;
 
 const Wrapper = styled.div`
-  padding: 15px 0; 
+
   padding-bottom: 30px;
   
   @media(min-width: 768px) {
@@ -17,6 +17,7 @@ const Wrapper = styled.div`
 
 const Header = styled(H2)`
   text-align: center;
+  padding-right: 20px;
 `;
 
 const PriceGroup = styled.div`
@@ -26,7 +27,7 @@ const PriceGroup = styled.div`
   padding-top: 15px;
   
   @media(min-width: 768px) {
-    padding-top: 30px;
+  
     width: 650px;
   }
 `;
