@@ -11,7 +11,6 @@ const Wrapper = styled.div`
   padding-bottom: 30px;
   
   @media(min-width: 768px) {
-    padding: 30px 0;
     padding-bottom: 60px;
   }
 `;
@@ -28,7 +27,7 @@ const PriceGroup = styled.div`
   
   @media(min-width: 768px) {
     padding-top: 30px;
-    width: 550px;
+    width: 650px;
   }
 `;
 
@@ -54,15 +53,13 @@ const Count = styled.div`
   
   font-family: 'Roboto-Light', sans-serif;
   
-  & div {
-    border-bottom: 1px solid #3333;
-  }
 `;
 
 const Prices = styled.div`
   display: flex;
   justify-content: space-between;
   font-family: 'Roboto-Light', sans-serif;
+      text-align: center;
 `;
 
 const Col = styled.div`
@@ -70,8 +67,8 @@ const Col = styled.div`
   width: 28%;
   
   @media(min-width: 768px) {
-    padding: 10px;
-    width: 20%;
+    padding: 12px;
+    width: 27%;
   }
 `;
 
@@ -94,6 +91,28 @@ const DescriptionWrapper = styled.div`
   }
 `;
 
+const Button = styled.button`
+  width: 100%;
+  height: 38px;
+  padding: 5px 30px;
+  color:#ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Roboto',sans-serif;
+  cursor: pointer;
+  
+  // Change the color to separate the buttons
+  background-color:#a2281f;
+  
+  &:hover {
+    background-color: #f00;
+  }
+  
+  @media (min-width: 768px) {
+    background-color:#d92518;
+  }
+`;
 
 export default ({ handleScroll }) => (
   <Wrapper>
@@ -101,53 +120,51 @@ export default ({ handleScroll }) => (
     <Waypoint onEnter={handleScroll} />
     <Header>Цены</Header>
     <PriceGroup>
-      <Name>Лазерная гравировка</Name>
       <Values>
+          <Prices>
+              <Col> <Name>Лазерная гравировка</Name></Col>
+              <Col> <Name>Лазерная резка</Name></Col>
+              <Col> <Name>УФ-печать</Name></Col>
+          </Prices>
+
+          <Prices>
+              <Col>от 2,5 руб/ см<sup>2</sup></Col>
+              <Col>от 9 руб/ м.п.</Col>
+              <Col>от 10 руб/ см<sup>2</sup></Col>
+          </Prices>
         <Count>
-          <Col>от 1000 ед.</Col>
-          <Col>от 500 ед.</Col>
-          <Col>от 10 ед.</Col>
+            <Col>
+                <div>
+                <Button onClick={(event) => {
+                    event.preventDefault();
+                    if (this.checkPhone(this.state)) {
+                        this.handleClick(this.state)
+                    }
+                }}>Заказать</Button>
+            </div>
+            </Col>
+            <Col><div>
+                <Button onClick={(event) => {
+                    event.preventDefault();
+                    if (this.checkPhone(this.state)) {
+                        this.handleClick(this.state)
+                    }
+                }}>Заказать</Button>
+            </div></Col>
+            <Col>
+                <div>
+                    <Button onClick={(event) => {
+                        event.preventDefault();
+                        if (this.checkPhone(this.state)) {
+                            this.handleClick(this.state)
+                        }
+                    }}>Заказать</Button>
+                </div>
+            </Col>
         </Count>
-        <Prices>
-          <Col>3.5 руб/см<sup>2</sup></Col>
-          <Col>3.8 руб/см<sup>2</sup></Col>
-          <Col>5 руб/см<sup>2</sup></Col>
-        </Prices>
+
       </Values>
     </PriceGroup>
-
-    <PriceGroup>
-      <Name>Лазерная резка кожа/пластик/фанера</Name>
-      <Values>
-        <Count>
-          <Col>от 1000 м.</Col>
-          <Col>от 500 м.</Col>
-          <Col>от 10 м.</Col>
-        </Count>
-        <Prices>
-          <Col>от 9 руб/м</Col>
-          <Col>от 14 руб/м</Col>
-          <Col>от 17 руб/м</Col>
-        </Prices>
-      </Values>
-    </PriceGroup>
-
-    <PriceGroup>
-      <Name>УФ-печать</Name>
-      <Values>
-        <Count>
-          <Col>от 1000 ед.</Col>
-          <Col>от 500 ед.</Col>
-          <Col>от 10 ед.</Col>
-        </Count>
-        <Prices>
-          <Col>от 10 руб/см<sup>2</sup></Col>
-          <Col>от 16.3 руб/см<sup>2</sup></Col>
-          <Col>от 17.6 руб/см<sup>2</sup></Col>
-        </Prices>
-      </Values>
-    </PriceGroup>
-
     <DescriptionWrapper>
       <Description>
         *Стоимость минимального заказа - 1000 руб.
