@@ -42,7 +42,7 @@ const Name = styled.h3`
 
 const Values = styled.div`
   font-size: 13px;
-  
+
   @media(min-width: 768px) {
     font-size: 14px;
   }
@@ -53,7 +53,7 @@ const Count = styled.div`
   justify-content: space-between;
   
   font-family: 'Roboto-Light', sans-serif;
-  
+ 
 `;
 
 const Prices = styled.div`
@@ -61,6 +61,7 @@ const Prices = styled.div`
   justify-content: space-between;
   font-family: 'Roboto-Light', sans-serif;
       text-align: center;
+      padding-bottom: 10;
 `;
 
 const Col = styled.div`
