@@ -99,7 +99,7 @@ const Button = styled.button`
   color:#ffffff;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Roboto',sans-serif;
   cursor: pointer;
   
@@ -113,6 +113,7 @@ const Button = styled.button`
   @media (min-width: 768px) {
     background-color:#d92518;
       padding: 5px 30px;
+      font-size: 18px;
   }
   `;
 const scroller = Scroll.scroller;
