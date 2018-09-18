@@ -76,16 +76,17 @@ const Col = styled.div`
 const Description = styled.span` 
   font-family: 'Roboto-Light', sans-serif;
   display: inline-block;
-  padding: 0 20px;
+  padding: 5 0px;
   padding-top: 30px;
   
   @media(min-width: 768px) {
     padding-top: 40px;
+    
   }
 `;
 
 const DescriptionWrapper = styled.div` 
-  text-align: left;
+  text-align: center;
   
   @media(min-width: 768px) {
     text-align: center;
@@ -95,7 +96,6 @@ const DescriptionWrapper = styled.div`
 const Button = styled.button`
   width: 100%;
   height: 38px;
-  padding: 5px 30px;
   color:#ffffff;
   border: none;
   border-radius: 5px;
@@ -112,8 +112,18 @@ const Button = styled.button`
   
   @media (min-width: 768px) {
     background-color:#d92518;
+      padding: 5px 30px;
   }
-`;
+  `;
+const scroller = Scroll.scroller;
+
+const handleClick = (anchor) => {
+    scroller.scrollTo(anchor, {
+        duration: 800,
+        delay: 100,
+        smooth: true,
+    });
+};
 
 export default ({ handleScroll }) => (
   <Wrapper>
@@ -136,30 +146,15 @@ export default ({ handleScroll }) => (
         <Count>
             <Col>
                 <div>
-                <Button onClick={(event) => {
-                    event.preventDefault();
-                    if (this.checkPhone(this.state)) {
-                        this.handleClick(this.state)
-                    }
-                }}>Заказать</Button>
+                <Button onClick={() => (handleClick('FormAnchor'))}>Заказать</Button>
             </div>
             </Col>
             <Col><div>
-                <Button onClick={(event) => {
-                    event.preventDefault();
-                    if (this.checkPhone(this.state)) {
-                        this.handleClick(this.state)
-                    }
-                }}>Заказать</Button>
+                <Button onClick={() => (handleClick('FormAnchor'))}>Заказать</Button>
             </div></Col>
             <Col>
                 <div>
-                    <Button onClick={(event) => {
-                        event.preventDefault();
-                        if (this.checkPhone(this.state)) {
-                            this.handleClick(this.state)
-                        }
-                    }}>Заказать</Button>
+                    <Button onClick={() => (handleClick('FormAnchor'))}>Заказать</Button>
                 </div>
             </Col>
         </Count>
