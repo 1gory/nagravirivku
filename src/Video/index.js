@@ -53,7 +53,7 @@ export default () => (
         </Col>
         <Col xs={6} sm={6} md={3} lg={3}>
           <YouTubeVideo
-            videoId="uagsCX4ll-4"
+            videoId="fWDj8b-Bmbc"
             opts={opt}
           />
         </Col>
@@ -77,7 +77,7 @@ export default () => (
         </Col>
         <Col xs={6} sm={6} md={3} lg={3}>
           <YouTubeVideo
-              videoId="DDXp8psesLU"
+              videoId="ECYIyiTFO9Q"
               opts={opt}
           />
         </Col>

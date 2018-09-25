@@ -32,32 +32,25 @@ export default () => (
     <Header>Наше оборудование</Header>
     <RowWrapper>
       <Row>
-        <Col xs={12} sm={12} md={6} lg={6}>
+        <Col xs={12} sm={12} md={4} lg={4}>
           <EquipmentCard
             name={<span>Оптоволоконный<br /> лазерный маркер</span>}
             description="Гравирует металл, кожу, горные породы"
             image={one}
           />
         </Col>
-        <Col xs={12} sm={12} md={6} lg={6}>
+        <Col xs={12} sm={12} md={4} lg={4}>
           <EquipmentCard
             name={<span>УФ-Принтер</span>}
             description="Печатает на металле, коже, пластике, стекле, дереве и тд"
             image={two}
           />
         </Col>
-        <Col xs={12} sm={12} md={6} lg={6}>
+        <Col xs={12} sm={12} md={4} lg={4}>
           <EquipmentCard
             name={<span>CO2 лазер</span>}
             description="Режет и гравирует дерево, кожу, пластик, орг стекло, стекло, ткань, горные породы"
             image={three}
-          />
-        </Col>
-        <Col xs={12} sm={12} md={6} lg={6}>
-          <EquipmentCard
-            name={<span>Фрезерный станок</span>}
-            description="Выполняет фрезеровку дерева, орг стекла, пластика, мдф, акрила, так же возможно сделать механическую гравировку."
-            image={four}
           />
         </Col>
       </Row>
