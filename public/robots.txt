@@ -1,2 +1,3 @@
 User-Agent: *
 Host: http://nagravirovku.ru/
+Sitemap: https://nagravirovku.ru/sitemap.xml
