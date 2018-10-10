@@ -131,7 +131,7 @@ export default ({ handleScroll }) => (
   <Wrapper>
     <PriceAnchor name="PriceAnchor" />
     <Waypoint onEnter={handleScroll} />
-    <Header>Цены</Header>
+    <Header>Стоимость</Header>
     <PriceGroup>
       <Values>
           <Prices>
