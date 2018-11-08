@@ -20,6 +20,28 @@ const Wrapper = styled.div`
   }
 `;
 
+const Presentation = styled.div`
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  background: #ef9611;
+  width: 60%;
+  border-radius: 20px;
+  margin:0 auto;
+  cursor: pointer;
+  
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  @media(min-width: 768px) {
+    padding: 30px 0;
+  } 
+`;
+
 const Header = styled(H2)`
   text-align: center;
 `;
@@ -86,6 +108,7 @@ const handleClick = (anchor) => {
 
 export default () => (
   <Wrapper>
+    <Presentation><a href="/presentation.pdf" target="_blank"><strong>НАЖМИТЕ</strong>, чтобы посмотреть презентацию!</a></Presentation>
     <MaterialsAnchor name="MaterialsAnchor" />
     <Header>C чем мы работаем</Header>
     <RowWrapper>
