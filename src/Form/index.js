@@ -51,6 +51,7 @@ const OfferText = styled(H2)`
 `;
 
 const SubOffer = styled.span`
+  text-transform: uppercase;
   font-size: 32px;
     
   @media (min-width: 768px) {
@@ -344,7 +345,8 @@ export default class extends Component {
           {/*</H1>*/}
         {/*</MainText>*/}
         <OfferText>
-          <small>ВЫПОЛНИМ<Br /> ЛАЗЕРНУЮ РЕЗКУ, ГРАВИРОВКУ, УФ-ПЕЧАТЬ</small><SubOffer><br />ВЫ ОСТАНЕТЕСЬ ДОВОЛЬНЫ!</SubOffer>
+          <small>ВЫПОЛНИМ<Br /> ЛАЗЕРНУЮ РЕЗКУ, ГРАВИРОВКУ, УФ-ПЕЧАТЬ</small>
+          <SubOffer><br />Экономим ваш бюджет - сохраняя качество!</SubOffer>
         </OfferText>
         <FormAnchor name="FormAnchor" />
         <Background>
