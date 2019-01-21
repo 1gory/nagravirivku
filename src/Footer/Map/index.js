@@ -66,7 +66,7 @@ export default () => (
         <LocationIcon src={locationIcon} />
         <div>
           <Label>Адресс:</Label>
-          <Address>Алтуфьевское шоссе д.5, Москва</Address>
+          <Address>Алтуфьевское шоссе д.79Ас6, Москва</Address>
         </div>
       </Location>
     </LocationWrapper>
@@ -75,14 +75,14 @@ export default () => (
         key: 'AIzaSyDtghT2dehFPUOPIn1JECSjwLBY0qW8-bk',
         language: 'ru',
       }}
-      defaultCenter={{ lat: 55.850664, lng: 37.582478 }}
+      defaultCenter={{ lat: 55.883943, lng: 37.584207 }}
       defaultZoom={14}
       options={{
         styles: MapStyle,
         scrollwheel: false,
       }}
     >
-      <div lat={55.850664} lng={37.582478}>
+      <div lat={55.883943} lng={37.584207}>
         <Marker src={locationIcon} />
       </div>
     </GoogleMap>

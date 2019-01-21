@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import H2 from './../Elements/H2';
-import g585 from './585gold.svg';
+import omega from './omega.svg';
 import broshaker from './broshaker.svg';
-import MRG_Logo from './MRG_Logo.svg';
+import mrg from './mrg.svg';
 import modulbank from './modulbank.svg';
-import rosautodor from './rosautodor.svg';
-import barplace from './barplaces.svg';
+import optprint from './optprint.svg';
+import barplace from './barplace.svg';
+import uzelkov from './uzelkov.svg';
+import trinitki from './trinitki.svg';
 
 const Wrapper = styled.div`
   padding: 30px 0;
@@ -36,14 +38,16 @@ export default () => (
     <Header>Наши партнеры</Header>
     <LogosWrapper>
       <div>
-        <Img src={g585}/>
-        <Img src={barplace}/>
-        <Img src={MRG_Logo}/>
+        <Img src={optprint}/>
+        <Img src={uzelkov}/>
+        <Img src={omega}/>
+        <Img src={trinitki}/>
       </div>
       <div>
-        <Img src={broshaker}/>
-        <Img src={rosautodor}/>
+        <Img src={mrg}/>
+        <Img src={barplace}/>
         <Img src={modulbank}/>
+        <Img src={broshaker}/>
       </div>
     </LogosWrapper>
   </Wrapper>
