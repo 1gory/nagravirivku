@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import H2 from './../Elements/H2';
 import g585 from './585gold.svg';
 import broshaker from './broshaker.svg';
-import casewood from './casewood.svg';
+import MRG_Logo from './MRG_Logo.svg';
 import modulbank from './modulbank.svg';
 import rosautodor from './rosautodor.svg';
-import barplace from './barplace.svg';
+import barplace from './barplaces.svg';
 
 const Wrapper = styled.div`
   padding: 30px 0;
@@ -38,7 +38,7 @@ export default () => (
       <div>
         <Img src={g585}/>
         <Img src={barplace}/>
-        <Img src={casewood}/>
+        <Img src={MRG_Logo}/>
       </div>
       <div>
         <Img src={broshaker}/>
