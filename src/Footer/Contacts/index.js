@@ -124,8 +124,8 @@ export default () => (
         <Contact
           icon={contactsPhone}
           label="Телефон для связи"
-          info="+7 (903) 006-99-90"
-          href="tel:+79030069990"
+          info="+7 (977) 344-16-90"
+          href="tel:+79773441619"
         />
         <Contact
           icon={contactsMessenger}
