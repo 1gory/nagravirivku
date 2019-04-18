@@ -96,7 +96,7 @@ export default () => (
         <Vremya>Круглосуточный <Br />прием заявок<Br /></Vremya>
         <Contacts>
           <Phone href="tel:+79773441619" onClick={() => (yaCounter48967208.reachGoal('phone'))}>
-            <strong>+7 (977) 344-16-19</strong>
+            <strong>+7 (903) 006-99-90</strong>
           </Phone>
           <Br />
           <Mail href="mailto:info@casplase.ru" onClick={() => (yaCounter48967208.reachGoal('mail'))}>

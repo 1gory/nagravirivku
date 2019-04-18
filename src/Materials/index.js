@@ -108,7 +108,6 @@ const handleClick = (anchor) => {
 
 export default () => (
   <Wrapper>
-    <Presentation><a href="/presentation.pdf" target="_blank">Посмотрите презентацию компании!</a></Presentation>
     <MaterialsAnchor name="MaterialsAnchor" />
     <Header>C чем мы работаем</Header>
     <RowWrapper>
