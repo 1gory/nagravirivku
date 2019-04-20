@@ -2,22 +2,11 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import modalClose from "./modal-close.svg";
 import InputMask from "react-input-mask";
-
-const Popup = styled.div`
-  padding: 30px;
-  margin: 20px;
-  font-family: "Roboto", sans-serif;
-  box-shadow: 0 7px 15px 0 rgba(1, 1, 1, 0.1);
-  background-color: #ffffff;
-  border-radius: 5px;
-  width: 350px;
-  box-shadow: 0 7px 15px 0 rgba(1, 1, 1, 0.1);
-`;
+import validatePhone from "../functuons/validatePhone";
 
 const Wrapper = styled.div`
   display: ${props => (props.isOpened ? "flex" : "none")};
   justify-content: center;
-  align-items: flex-start;
   align-items: center;
   position: fixed;
   top: 0;
@@ -28,10 +17,22 @@ const Wrapper = styled.div`
   overflow: scroll;
 `;
 
+const FormBlock = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: #edeaea;
+`;
+
 const StyledImg = styled.img`
+  position: absolute;
+  top: 5px;
+  right: 10px;
   width: 13px;
   height: 13px;
   padding-top: 5px;
+  cursor: pointer;
 `;
 
 const Input = styled(InputMask)`
@@ -45,6 +46,29 @@ const Input = styled(InputMask)`
   font-size: 16px;
   text-align: center;
   margin-bottom: 10px;
+`;
+
+const Button = styled.button`
+  width: 100%;
+  height: 56px;
+  padding: 10px 40px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 26px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+
+  // Change the color to separate the buttons
+  background-color: #a2281f;
+
+  &:hover {
+    background-color: #f00;
+  }
+
+  @media (min-width: 768px) {
+    background-color: #d92518;
+  }
 `;
 
 export default class extends Component {
@@ -69,6 +93,8 @@ export default class extends Component {
 
   handleClick(formData) {
     yaCounter48967208.reachGoal("order");
+    this.props.handleClose();
+    this.props.handleOpen();
     fetch("/api/order", {
       method: "POST",
       headers: {
@@ -102,35 +128,37 @@ export default class extends Component {
   render() {
     return (
       <Wrapper isOpened={this.props.isOpened}>
-        <StyledImg onClick={this.props.handleClose} src={modalClose} />
-        <div>
-          <Input
-            onChange={this.handleChangeForm}
-            placeholder="Имя"
-            name="name"
-          />
-        </div>
-        <div>
-          <Input
-            invalidNumber={this.state.invalidNumber}
-            onChange={this.handleChangeForm}
-            placeholder="Ваш телефон"
-            mask="+7 (999) 999-99-99"
-            name="phone"
-          />
-        </div>
-        <div>
-          <Button
-            onClick={event => {
-              event.preventDefault();
-              if (this.checkPhone(this.state)) {
-                this.handleClick(this.state);
-              }
-            }}
-          >
-            Заказать
-          </Button>
-        </div>
+        <FormBlock>
+          <StyledImg onClick={this.props.handleClose} src={modalClose} />
+          <div>
+            <Input
+              onChange={this.handleChangeForm}
+              placeholder="Имя"
+              name="name"
+            />
+          </div>
+          <div>
+            <Input
+              invalidNumber={this.state.invalidNumber}
+              onChange={this.handleChangeForm}
+              placeholder="Ваш телефон"
+              mask="+7 (999) 999-99-99"
+              name="phone"
+            />
+          </div>
+          <div>
+            <Button
+              onClick={event => {
+                event.preventDefault();
+                if (this.checkPhone(this.state)) {
+                  this.handleClick(this.state);
+                }
+              }}
+            >
+              Заказать
+            </Button>
+          </div>
+        </FormBlock>
       </Wrapper>
     );
   }

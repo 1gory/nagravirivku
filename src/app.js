@@ -62,6 +62,11 @@ export default class extends Component {
   render() {
     return (
       <Wrapper>
+        <FormPopUp
+          handleOpen={this.handleOpen}
+          isOpened={this.state.formPopUp}
+          handleClose={this.formPopUpClose}
+        />
         <OrderPopUp
           isOpened={this.state.isOpened}
           handleClose={this.handleClose}

@@ -49,25 +49,8 @@ const Card = styled.div`
   font-family: "Roboto-Light", sans-serif;
   color: #fff;
   background: url(${props => props.bg}) no-repeat;
-`;
-
-const Description = styled.span`
-  font-family: "Roboto-Light", sans-serif;
-  display: inline-block;
-  padding: 5 0px;
-  padding-top: 30px;
-
-  @media (min-width: 768px) {
-    padding-top: 40px;
-  }
-`;
-
-const DescriptionWrapper = styled.div`
-  text-align: center;
-
-  @media (min-width: 768px) {
-    text-align: center;
-  }
+  background-size: cover;
+  margin: 20px 0;
 `;
 
 const Button = styled.button`
@@ -99,7 +82,7 @@ const handleClick = () => {
   this.props.formPopUpOpen();
 };
 
-export default ({ handleScroll }) => (
+export default ({ formPopUpOpen, handleScroll }) => (
   <Wrapper>
     <PriceAnchor name="PriceAnchor" />
     <Waypoint onEnter={handleScroll} />
@@ -112,14 +95,14 @@ export default ({ handleScroll }) => (
             <Col>
               от 2,5 руб/ см<sup>2</sup>
             </Col>
-            <Button onClick={() => handleClick()}>Заказать</Button>
+            <Button onClick={formPopUpOpen}>Заказать</Button>
           </Card>{" "}
         </Col>
         <Col xs={12} sm={12} md={4} lg={4}>
           <Card bg={BG}>
             <Name>Лазерная резка</Name>
             <Col>от 9 руб/ м.п.</Col>
-            <Button onClick={() => handleClick()}>Заказать</Button>
+            <Button onClick={formPopUpOpen}>Заказать</Button>
           </Card>
         </Col>
         <Col xs={12} sm={12} md={4} lg={4}>
@@ -128,13 +111,10 @@ export default ({ handleScroll }) => (
             <Col>
               от 10 руб/ см<sup>2</sup>
             </Col>
-            <Button onClick={() => handleClick()}>Заказать</Button>
+            <Button onClick={formPopUpOpen}>Заказать</Button>
           </Card>
         </Col>
       </Row>
     </RowWrapper>
-    <DescriptionWrapper>
-      <Description>*Стоимость минимального заказа - 1000 руб.</Description>
-    </DescriptionWrapper>
   </Wrapper>
 );
