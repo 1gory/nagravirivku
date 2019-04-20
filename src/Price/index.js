@@ -33,14 +33,14 @@ const Header = styled(H2)`
 `;
 
 const Name = styled.h3`
-  font-size: 1em;
-
-  @media (min-width: 768px) {
-    font-size: 1.17em;
-  }
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  z-index: 100;
 `;
 
 const Card = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -63,6 +63,7 @@ const Button = styled.button`
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
+  z-index: 100;
 
   // Change the color to separate the buttons
   background-color: #a2281f;
@@ -78,9 +79,18 @@ const Button = styled.button`
   }
 `;
 
-const handleClick = () => {
-  this.props.formPopUpOpen();
-};
+const Price = styled.div`
+  z-index: 100;
+`;
+
+const Shadow = styled.div`
+  position: absolute;
+  background: linear-gradient(to bottom, transparent, black) no-repeat bottom;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+`;
 
 export default ({ formPopUpOpen, handleScroll }) => (
   <Wrapper>
@@ -92,25 +102,28 @@ export default ({ formPopUpOpen, handleScroll }) => (
         <Col xs={12} sm={12} md={4} lg={4}>
           <Card bg={BG}>
             <Name>Лазерная гравировка</Name>
-            <Col>
+            <Price>
               от 2,5 руб/ см<sup>2</sup>
-            </Col>
+            </Price>
             <Button onClick={formPopUpOpen}>Заказать</Button>
+            <Shadow />
           </Card>{" "}
         </Col>
         <Col xs={12} sm={12} md={4} lg={4}>
           <Card bg={BG}>
+            <Shadow />
             <Name>Лазерная резка</Name>
-            <Col>от 9 руб/ м.п.</Col>
+            <Price>от 9 руб/ м.п.</Price>
             <Button onClick={formPopUpOpen}>Заказать</Button>
           </Card>
         </Col>
         <Col xs={12} sm={12} md={4} lg={4}>
           <Card bg={BG}>
+            <Shadow />
             <Name>УФ-печать</Name>
-            <Col>
+            <Price>
               от 10 руб/ см<sup>2</sup>
-            </Col>
+            </Price>
             <Button onClick={formPopUpOpen}>Заказать</Button>
           </Card>
         </Col>
