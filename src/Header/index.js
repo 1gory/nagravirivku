@@ -95,7 +95,7 @@ export default () => (
         </HeaderWrapper>
         <Vremya>Круглосуточный <Br />прием заявок<Br /></Vremya>
         <Contacts>
-          <Phone href="tel:+79030069990" onClick={() => (yaCounter48967208.reachGoal('phone'))}>
+          <Phone href="tel:+79773441619" onClick={() => (yaCounter48967208.reachGoal('phone'))}>
             <strong>+7 (903) 006-99-90</strong>
           </Phone>
           <Br />
