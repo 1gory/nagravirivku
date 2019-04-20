@@ -44,6 +44,7 @@ const Wrapper = styled.div`
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   overflow: scroll;
+  z-index: 200;
 `;
 
 const StyledImg = styled.img`
