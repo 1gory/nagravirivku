@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import validatePhone from '../functuons/validatePhone';
-import Scroll from 'react-scroll';
-import InputMask from 'react-input-mask';
-import H2 from './../Elements/H2';
-import bg from './background.jpg';
-import bgMin from './background-min.jpg';
+import React, { Component } from "react";
+import styled from "styled-components";
+import validatePhone from "../functuons/validatePhone";
+import Scroll from "react-scroll";
+import InputMask from "react-input-mask";
+import H2 from "./../Elements/H2";
+import bg from "./background.jpg";
+import bgMin from "./background-min.jpg";
 
 const FormAnchor = Scroll.Element;
 
@@ -15,19 +15,19 @@ const MainText = styled.div`
   // position: absolute;
   color: #fff;
   text-align: center;
-  
-  @media(min-width: 768px) {
+
+  @media (min-width: 768px) {
     padding-top: 35px;
   }
 `;
 
 const MainSubHeader = styled.span`
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 32px;
 `;
 
 const Br = styled.br`
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     display: none;
   }
 `;
@@ -53,26 +53,26 @@ const OfferText = styled(H2)`
 const SubOffer = styled.span`
   text-transform: uppercase;
   font-size: 32px;
-    
+
   @media (min-width: 768px) {
     font-size: 42px;
   }
 `;
 
 const Wrapper = styled.div`
-  background: #FFF;
+  background: #fff;
   background-size: cover;
-  background-image: url(${bgMin});  
-  
+  background-image: url(${bgMin});
+
   @media (min-width: 768px) {
-    background-image: url(${bg});  
+    background-image: url(${bg});
   }
 `;
 
 const Background = styled.div`
   padding: 30px 0;
   // background: rgba(93,95,102,0.66);
-  
+
   @media (min-width: 768px) {
     padding: 60px 0;
   }
@@ -81,7 +81,7 @@ const Background = styled.div`
 const Form = styled.form`
   margin: 0 auto;
   padding: 0 20px;
-  
+
   @media (min-width: 768px) {
     display: flex;
     padding: 0 30px;
@@ -93,22 +93,22 @@ const Button = styled.button`
   width: 100%;
   height: 56px;
   padding: 10px 40px;
-  color:#ffffff;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   font-size: 26px;
-  font-family: 'Roboto',sans-serif;
+  font-family: "Roboto", sans-serif;
   cursor: pointer;
-  
+
   // Change the color to separate the buttons
-  background-color:#a2281f;
-  
+  background-color: #a2281f;
+
   &:hover {
     background-color: #f00;
   }
-  
+
   @media (min-width: 768px) {
-    background-color:#d92518;
+    background-color: #d92518;
   }
 `;
 
@@ -117,8 +117,9 @@ const Input = styled(InputMask)`
   padding: 10px 35px;
   border: none;
   border-radius: 5px;
-  background-color: ${({invalidNumber}) => (invalidNumber ? '#ff9292' : '#fff' )};
-  font-family: 'Roboto',sans-serif;
+  background-color: ${({ invalidNumber }) =>
+    invalidNumber ? "#ff9292" : "#fff"};
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   text-align: center;
   margin-bottom: 10px;
@@ -127,10 +128,11 @@ const Input = styled(InputMask)`
 const FileLabel = styled.label`
   font-size: 22px;
   color: white;
-  background-color: ${({fileUploaded}) => (fileUploaded ? '#00bf2a' : '#3b3b3b')};;
+  background-color: ${({ fileUploaded }) =>
+    fileUploaded ? "#00bf2a" : "#3b3b3b"};
   display: inline-block;
   cursor: pointer;
-  font-family: 'Roboto',sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   width: 100%;
   text-align: left;
@@ -148,14 +150,14 @@ const FileLabel = styled.label`
     position: absolute;
     z-index: -1;
   }
-  
+
   margin-bottom: 10px;
 `;
 
 const Text = styled.div`
   padding-bottom: 20px;
   text-shadow: 1px 1px 2px black, 0 0 1em black;
-  
+
   @media (min-width: 768px) {
     width: 700px;
   }
@@ -173,7 +175,7 @@ const Header = styled(H2)`
   padding: 0;
   margin: 10px 0;
   padding-bottom: 10px;
-  
+
   @media (min-width: 768px) {
     font-size: 28px;
     margin: 0;
@@ -182,11 +184,11 @@ const Header = styled(H2)`
 `;
 
 const SubHeader = styled.span`
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: block;
   color: #fff;
   padding-bottom: 10px;
-  
+
   @media (min-width: 768px) {
     font-size: 20px;
     padding-bottom: 10px;
@@ -195,16 +197,17 @@ const SubHeader = styled.span`
 
 const FileLink = styled.a`
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   margin-top: 10px;
-  display: ${({ isFileFieldHided }) => (isFileFieldHided ? 'inline-block' : 'none')};
+  display: ${({ isFileFieldHided }) =>
+    isFileFieldHided ? "inline-block" : "none"};
   cursor: pointer;
   text-decoration: underline;
 `;
 
 const FileField = styled.div`
-  display: ${({ isFileFieldHided }) => (isFileFieldHided ? 'none' : 'block')};
+  display: ${({ isFileFieldHided }) => (isFileFieldHided ? "none" : "block")};
 `;
 
 const CallWrapper = styled.div`
@@ -218,28 +221,27 @@ const CallWrapper = styled.div`
 const CallButtonDescription = styled.div`
   padding: 10px 0;
   text-align: center;
-  font-family: 'Roboto-Light', sans-serif;
+  font-family: "Roboto-Light", sans-serif;
   font-size: 18px;
   color: #fff;
 `;
 
 const CallButton = styled(Button)`
-  background-color:#d92518;
+  background-color: #d92518;
   font-size: 20px;
 `;
 
 export default class extends Component {
-
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
       invalidNumber: false,
       fileUploaded: false,
       isFileFieldHided: true,
-      fileLabelText: 'Прикрепите файл...',
-      phone: '',
-      filePath: ''
+      fileLabelText: "Прикрепите файл...",
+      phone: "",
+      filePath: ""
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -257,23 +259,25 @@ export default class extends Component {
   }
 
   handleClick(formData) {
-    yaCounter48967208.reachGoal('order');
-    fetch('/api/order', {
-      method: 'POST',
+    yaCounter48967208.reachGoal("order");
+    fetch("/api/order", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
+        "Content-Type": "application/json",
+        Accept: "application/json"
       },
-      credentials: 'include',
-      body: JSON.stringify(formData),
-    }).then(async (data) => {
-      this.props.handleOpen();
-      const response = await data.json();
-    }).catch((/* error */) => {
-      // this.setState({
-      //   fileFormStatus: ERROR_FORM_STATUS,
-      // });
-    });
+      credentials: "include",
+      body: JSON.stringify(formData)
+    })
+      .then(async data => {
+        this.props.handleOpen();
+        const response = await data.json();
+      })
+      .catch((/* error */) => {
+        // this.setState({
+        //   fileFormStatus: ERROR_FORM_STATUS,
+        // });
+      });
   }
 
   handleChangeFile(event) {
@@ -281,7 +285,7 @@ export default class extends Component {
     const file = event.target.files[0];
     reader.onload = (/* e */) => {
       if (file.size > 5000000) {
-        alert('Пожалуйста, выберите файл меньше 5Мб');
+        alert("Пожалуйста, выберите файл меньше 5Мб");
       } else {
         this.sendFile(file);
       }
@@ -291,40 +295,42 @@ export default class extends Component {
   }
 
   sendFile(file) {
-    this.setState({ fileLabelText: 'Файл загружается' });
+    this.setState({ fileLabelText: "Файл загружается" });
     const form = new FormData();
-    form.append('file', file);
-    fetch('/api/file', {
-      method: 'POST',
-      body: form,
-    }).then(async (response) => {
-      if (response.status !== 200) {
+    form.append("file", file);
+    fetch("/api/file", {
+      method: "POST",
+      body: form
+    })
+      .then(async response => {
+        if (response.status !== 200) {
+          this.setState({
+            fileLabelText: "Не удалось загрузить файл.."
+          });
+
+          return;
+        }
+        const responseData = await response.json();
         this.setState({
-          fileLabelText: 'Не удалось загрузить файл..',
+          fileLabelText: "Файл загружен!",
+          fileUploaded: true,
+          filePath: responseData.path,
+          fileStatus: "success"
         });
 
-        return;
-      }
-      const responseData = await response.json();
-      this.setState({
-        fileLabelText: 'Файл загружен!',
-        fileUploaded: true,
-        filePath: responseData.path,
-        fileStatus: 'success',
+        console.log(this.state);
+      })
+      .catch((/* e */) => {
+        this.setState({
+          fileLabelText: "Не удалось загрузить файл.."
+        });
       });
-
-      console.log(this.state);
-    }).catch((/* e */) => {
-      this.setState({
-        fileLabelText: 'Не удалось загрузить файл..',
-      });
-    });
   }
 
   checkPhone(formData) {
-    if (!formData.phone || !(validatePhone(formData.phone))) {
+    if (!formData.phone || !validatePhone(formData.phone)) {
       this.setState({
-        invalidNumber: true,
+        invalidNumber: true
       });
       return false;
     }
@@ -332,93 +338,107 @@ export default class extends Component {
   }
 
   hideFileField() {
-    this.setState({isFileFieldHided: false});
+    this.setState({ isFileFieldHided: false });
   }
 
   render() {
-    return <div>
-      <Wrapper>
-        {/*<MainText>*/}
+    return (
+      <div>
+        <Wrapper>
+          {/*<MainText>*/}
           {/*<H1>*/}
-            {/*Лазерная резка, гравировка, УФ-печать*/}
-            {/*<MainSubHeader> в Москве</MainSubHeader>*/}
+          {/*Лазерная резка, гравировка, УФ-печать*/}
+          {/*<MainSubHeader> в Москве</MainSubHeader>*/}
           {/*</H1>*/}
-        {/*</MainText>*/}
-        <OfferText>
-          <small>ВЫПОЛНИМ<Br /> ЛАЗЕРНУЮ РЕЗКУ, ГРАВИРОВКУ, УФ-ПЕЧАТЬ</small>
-          <SubOffer><br />Экономим ваш бюджет - сохраняя качество!</SubOffer>
-        </OfferText>
-        <FormAnchor name="FormAnchor" />
-        <Background>
-          <Form>
-            <Text>
-              <Header>Оставьте заявку:</Header>
-              <SubHeader>— Расчет стоимости за 27 минут</SubHeader>
-              <SubHeader>— Бесплатные образцы</SubHeader>
-              <SubHeader>— Подготовим макет</SubHeader>
-            </Text>
-            <Fields>
-              <div>
-                <Input
-                  invalidNumber={this.state.invalidNumber}
-                  onChange={this.handleChangeForm}
-                  placeholder="Ваш телефон"
-                  mask="+7 (999) 999-99-99"
-                  name="phone"
-                />
-              </div>
-              <div>
-                <Input
+          {/*</MainText>*/}
+          <OfferText>
+            <small>
+              ВЫПОЛНИМ<Br /> ЛАЗЕРНУЮ РЕЗКУ, ГРАВИРОВКУ, УФ-ПЕЧАТЬ
+            </small>
+            <SubOffer>
+              <br />Экономим ваш бюджет - сохраняя качество!
+            </SubOffer>
+          </OfferText>
+          <FormAnchor name="FormAnchor" />
+          <Background>
+            <Form>
+              <Text>
+                <Header>Оставьте заявку:</Header>
+                <SubHeader>— Расчет стоимости за 27 минут</SubHeader>
+                <SubHeader>— Бесплатные образцы</SubHeader>
+                <SubHeader>— Подготовим макет</SubHeader>
+              </Text>
+              <Fields>
+                <div>
+                  <Input
                     onChange={this.handleChangeForm}
-                    placeholder="Комментарий (не обязательно)"
-                    name="comment"
-                />
-              </div>
-              <div>
-                <Button onClick={(event) => {
-                  event.preventDefault();
-                  if (this.checkPhone(this.state)) {
-                    this.handleClick(this.state)
-                  }
-                }}>Заказать</Button>
-              </div>
-              <FileField isFileFieldHided={this.state.isFileFieldHided}>
-                <FileLabel fileUploaded={this.state.fileUploaded}>
-                {this.state.fileLabelText}
-                <input
-                name="file"
-                onChange={this.handleChangeFile}
-                type="file"
-                />
-                </FileLabel>
-                <input name="filePath" type="hidden" value={this.state.filePath}/>
-              </FileField>
-              <FileLink
-                isFileFieldHided={this.state.isFileFieldHided}
-                onClick={this.hideFileField}
-                to="#"
-              >
-                Есть макет, нажмите сюда
-              </FileLink>
-            </Fields>
+                    placeholder="Имя"
+                    name="name"
+                  />
+                </div>
+                <div>
+                  <Input
+                    invalidNumber={this.state.invalidNumber}
+                    onChange={this.handleChangeForm}
+                    placeholder="Ваш телефон"
+                    mask="+7 (999) 999-99-99"
+                    name="phone"
+                  />
+                </div>
+                <div>
+                  <Button
+                    onClick={event => {
+                      event.preventDefault();
+                      if (this.checkPhone(this.state)) {
+                        this.handleClick(this.state);
+                      }
+                    }}
+                  >
+                    Заказать
+                  </Button>
+                </div>
+                <FileField isFileFieldHided={this.state.isFileFieldHided}>
+                  <FileLabel fileUploaded={this.state.fileUploaded}>
+                    {this.state.fileLabelText}
+                    <input
+                      name="file"
+                      onChange={this.handleChangeFile}
+                      type="file"
+                    />
+                  </FileLabel>
+                  <input
+                    name="filePath"
+                    type="hidden"
+                    value={this.state.filePath}
+                  />
+                </FileField>
+                <FileLink
+                  isFileFieldHided={this.state.isFileFieldHided}
+                  onClick={this.hideFileField}
+                  to="#"
+                >
+                  Есть макет, нажмите сюда
+                </FileLink>
+              </Fields>
 
-            <CallWrapper>
-              <CallButtonDescription>
-                Нет времени ждать?
-              </CallButtonDescription>
-              <CallButton
-                onClick={(event) => {
-                  event.preventDefault();
-                  yaCounter48967208.reachGoal('phone');
-                  document.location.href = 'tel:+79030069990';
-                  }
-                }>
-                Позвонить!
-              </CallButton>
-            </CallWrapper>
-          </Form>
-        </Background>
-      </Wrapper>
-    </div>
+              <CallWrapper>
+                <CallButtonDescription>
+                  Нет времени ждать?
+                </CallButtonDescription>
+                <CallButton
+                  onClick={event => {
+                    event.preventDefault();
+                    yaCounter48967208.reachGoal("phone");
+                    document.location.href = "tel:+79030069990";
+                  }}
+                >
+                  Позвонить!
+                </CallButton>
+              </CallWrapper>
+            </Form>
+          </Background>
+        </Wrapper>
+      </div>
+    );
   }
 }
