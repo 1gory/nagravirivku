@@ -65,7 +65,7 @@ const Button = styled.button`
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
-  z-index: 100;
+  z-index: 1;
 
   // Change the color to separate the buttons
   background-color: #a2281f;

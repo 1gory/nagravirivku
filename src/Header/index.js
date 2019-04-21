@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   opacity: 0.9;
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 `;
 
 const HeaderWrapper = styled.div`
