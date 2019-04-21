@@ -1,13 +1,6 @@
-/* eslint no-param-reassign: 0 */
-
 import React from "react";
 import styled from "styled-components";
 import modalClose from "./modal-close.svg";
-// import ReactGA from 'react-ga';
-// import ReactPixel from 'react-facebook-pixel';
-// import ym from 'react-yandex-metrika';
-// import moment from 'moment';
-// import Form from './Details';
 
 const WrapperH3 = styled.div`
   display: flex;
@@ -29,7 +22,6 @@ const Popup = styled.div`
   background-color: #ffffff;
   border-radius: 5px;
   width: 350px;
-  box-shadow: 0 7px 15px 0 rgba(1, 1, 1, 0.1);
 `;
 
 const Wrapper = styled.div`

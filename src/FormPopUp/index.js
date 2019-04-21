@@ -22,14 +22,15 @@ const FormBlock = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 30px;
-  background: #edeaea;
+  padding: 40px;
+  border-radius: 5px;
+  background: #fff;
 `;
 
 const StyledImg = styled.img`
   position: absolute;
-  top: 5px;
-  right: 10px;
+  top: 10px;
+  right: 15px;
   width: 13px;
   height: 13px;
   padding-top: 5px;
@@ -39,7 +40,7 @@ const StyledImg = styled.img`
 const Input = styled(InputMask)`
   width: 100%;
   padding: 10px 35px;
-  border: none;
+  border: 1px solid #ccc;
   border-radius: 5px;
   background-color: ${({ invalidNumber }) =>
     invalidNumber ? "#ff9292" : "#fff"};
@@ -51,12 +52,11 @@ const Input = styled(InputMask)`
 
 const Button = styled.button`
   width: 100%;
-  height: 56px;
   padding: 10px 40px;
   color: #ffffff;
   border: none;
   border-radius: 5px;
-  font-size: 26px;
+  font-size: 22px;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
 

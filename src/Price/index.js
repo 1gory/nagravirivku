@@ -2,9 +2,11 @@ import React from "react";
 import { Row, Col } from "react-flexbox-grid";
 import styled from "styled-components";
 import Scroll from "react-scroll";
-import Waypoint from "react-waypoint";
+import { Waypoint } from "react-waypoint";
 import H2 from "./../Elements/H2";
-import BG from "./1.jpg";
+import cutting from "./cutting.jpg";
+import engraving from "./engraving.jpg";
+import print from "./print.jpg";
 
 const PriceAnchor = Scroll.Element;
 
@@ -100,17 +102,17 @@ export default ({ formPopUpOpen, handleScroll }) => (
     <RowWrapper>
       <Row>
         <Col xs={12} sm={12} md={4} lg={4}>
-          <Card bg={BG}>
+          <Card bg={engraving}>
             <Name>Лазерная гравировка</Name>
             <Price>
               от 2,5 руб/ см<sup>2</sup>
             </Price>
             <Button onClick={formPopUpOpen}>Заказать</Button>
             <Shadow />
-          </Card>{" "}
+          </Card>
         </Col>
         <Col xs={12} sm={12} md={4} lg={4}>
-          <Card bg={BG}>
+          <Card bg={cutting}>
             <Shadow />
             <Name>Лазерная резка</Name>
             <Price>от 9 руб/ м.п.</Price>
@@ -118,7 +120,7 @@ export default ({ formPopUpOpen, handleScroll }) => (
           </Card>
         </Col>
         <Col xs={12} sm={12} md={4} lg={4}>
-          <Card bg={BG}>
+          <Card bg={print}>
             <Shadow />
             <Name>УФ-печать</Name>
             <Price>
