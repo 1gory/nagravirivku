@@ -19,8 +19,8 @@ export default (mailType, data) => {
   });
 
   let output = '';
+  output += `Имя: ${data.name} <br>`;
   output += `Телефон: ${data.phone} <br>`;
-  output += `Комментарий: ${data.comment} <br>`;
   output += data.filePath ? `Файл: ${data.filePath} <br>` : '';
 
   const mailOptions = {
