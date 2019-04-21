@@ -1,13 +1,6 @@
-/* eslint no-param-reassign: 0 */
-
-import React from 'react';
-import styled from 'styled-components';
-import modalClose from './modal-close.svg';
-// import ReactGA from 'react-ga';
-// import ReactPixel from 'react-facebook-pixel';
-// import ym from 'react-yandex-metrika';
-// import moment from 'moment';
-// import Form from './Details';
+import React from "react";
+import styled from "styled-components";
+import modalClose from "./modal-close.svg";
 
 const WrapperH3 = styled.div`
   display: flex;
@@ -24,16 +17,15 @@ const H3 = styled.h3`
 const Popup = styled.div`
   padding: 30px;
   margin: 20px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   box-shadow: 0 7px 15px 0 rgba(1, 1, 1, 0.1);
   background-color: #ffffff;
   border-radius: 5px;
   width: 350px;
-  box-shadow: 0 7px 15px 0 rgba(1, 1, 1, 0.1);
 `;
 
 const Wrapper = styled.div`
-  display: ${props => (props.isOpened ? 'flex' : 'none')};
+  display: ${props => (props.isOpened ? "flex" : "none")};
   justify-content: center;
   align-items: flex-start;
   align-items: center;
@@ -44,17 +36,17 @@ const Wrapper = styled.div`
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.3);
   overflow: scroll;
+  z-index: 200;
 `;
 
 const StyledImg = styled.img`
   width: 13px;
   height: 13px;
   padding-top: 5px;
+  cursor: pointer;
 `;
 
-const Text = styled.p`
-  
-`;
+const Text = styled.p``;
 
 export default props => (
   <Wrapper isOpened={props.isOpened}>

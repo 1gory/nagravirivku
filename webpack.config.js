@@ -17,7 +17,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           query: {
-            presets: ["env", "react"]
+            presets: ["@babel/preset-env", "@babel/react"]
           }
         },
       },
@@ -38,6 +38,6 @@ module.exports = {
     contentBase: path.join(__dirname, "static"),
     compress: false,
     port: WEBPACK_DEV_SERVER_PORT,
-    proxy: {'*': `http://localhost:${DEV_SERVER_PORT}`}
+    proxy: {'*': `http://localhost:${DEV_SERVER_PORT}`},
   }
 };

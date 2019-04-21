@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
       htmlData
       .replace('<style id="serverStyleTags"></style>', styleTags)
       .replace('<div id="root"></div>', `<div id="root">${markup}</div>`)
-      .replace('{{remoteAddress}}', ip) : htmlData;
+      .replace('{{remoteAddress}}', ip) : htmlData
     ;
 
     res.send(RenderedApp);
