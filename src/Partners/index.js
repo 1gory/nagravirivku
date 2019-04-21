@@ -51,6 +51,7 @@ const MobileSlider = styled.div`
 const Slide = styled.div`
   display: flex;
   flex-direction: column;
+  height: 350px;
   justify-content: center;
   align-items: center;
 `;
@@ -97,8 +98,8 @@ export default () => (
           <RightArrow onClick={nextSlide} />
         )}
         transitionMode="scroll3d"
-        slideWidth="200px"
         slideWidth={0.8}
+        wrapAround={true}
         heightMode="first"
         renderBottomCenterControls={null}
         cellAlign="right"
@@ -106,12 +107,14 @@ export default () => (
         opacityScale={0.3}
       >
         <Slide>
-          <Img src={optprint} />
           <Img src={uzelkov} />
-          <Img src={omega} />
+          <Img src={trinitki} />
         </Slide>
         <Slide>
-          <Img src={trinitki} />
+          <Img src={omega} />
+          <Img src={optprint} />
+        </Slide>
+        <Slide>
           <Img src={mrg} />
           <Img src={barplace} />
         </Slide>

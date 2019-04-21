@@ -77,6 +77,7 @@ export default () => (
         renderCenterRightControls={({ nextSlide }) => (
           <RightArrow onClick={nextSlide} />
         )}
+        wrapAround={true}
         transitionMode="scroll3d"
         slideWidth={0.8}
         heightMode="first"
