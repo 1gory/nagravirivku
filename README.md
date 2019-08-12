@@ -1,1 +1,1 @@
-1. replace  server/config.js.default to production config
+1. replace  server/config.js.default to production configs
