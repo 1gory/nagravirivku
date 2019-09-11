@@ -3,7 +3,7 @@ import { config } from '../config';
 
 export default (mailType, data) => {
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'yandex',
     auth: {
       user: config.production.notificationMail,
       pass: config.production.notificationPass,
