@@ -115,7 +115,7 @@ export default () => (
         <Col xs={4} sm={4} md={2} lg={2}>
           <Img src={metal} alt="Металл" onClick={() => (handleClick('GalleryAnchor'))} />
           <Material>Металл</Material>
-          <Description>Сталь, аллюминий, медь, латунь, драгоценные металлы. <strong>(только гравировка)</strong><br/></Description>
+          <Description>Сталь, аллюминий, медь, латунь, драгоценные металлы. <strong><br/>(только гравировка)</strong></Description>
         </Col>
         <Col xs={4} sm={4} md={2} lg={2}>
           <Img src={leather} alt="Кожа" onClick={() => (handleClick('GalleryAnchor'))} />
