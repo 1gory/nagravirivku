@@ -394,7 +394,7 @@ export default class extends Component {
                       }
                     }}
                   >
-                    Заказать
+                    Получить консультацию
                   </Button>
                 </div>
                 <FileField isFileFieldHided={this.state.isFileFieldHided}>

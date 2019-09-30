@@ -107,7 +107,7 @@ export default ({ formPopUpOpen, handleScroll }) => (
             <Price>
               от 2,5 руб/ см<sup>2</sup>
             </Price>
-            <Button onClick={formPopUpOpen}>Заказать</Button>
+            <Button onClick={formPopUpOpen}>Получить консультацию</Button>
             <Shadow />
           </Card>
         </Col>
@@ -116,7 +116,7 @@ export default ({ formPopUpOpen, handleScroll }) => (
             <Shadow />
             <Name>Лазерная резка</Name>
             <Price>от 9 руб/ м.п.</Price>
-            <Button onClick={formPopUpOpen}>Заказать</Button>
+            <Button onClick={formPopUpOpen}>Получить консультацию</Button>
           </Card>
         </Col>
         <Col xs={12} sm={12} md={4} lg={4}>
@@ -126,7 +126,7 @@ export default ({ formPopUpOpen, handleScroll }) => (
             <Price>
               от 10 руб/ см<sup>2</sup>
             </Price>
-            <Button onClick={formPopUpOpen}>Заказать</Button>
+            <Button onClick={formPopUpOpen}>Получить консультацию</Button>
           </Card>
         </Col>
       </Row>

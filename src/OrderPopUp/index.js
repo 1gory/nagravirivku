@@ -55,7 +55,7 @@ export default props => (
         <H3>Спасибо, заявка принята!</H3>
         <StyledImg onClick={props.handleClose} src={modalClose} />
       </WrapperH3>
-      <Text>Свяжемся с Вами в ближайшее время!</Text>
+      <Text>Свяжемся с Вами в течении 10 минут!</Text>
     </Popup>
   </Wrapper>
 );
