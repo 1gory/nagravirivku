@@ -92,11 +92,11 @@ const Form = styled.form`
 const Button = styled.button`
   width: 100%;
   height: 56px;
-  padding: 10px 40px;
+  padding: 10px 20px;
   color: #ffffff;
   border: none;
   border-radius: 5px;
-  font-size: 26px;
+  font-size: 18px;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
 
@@ -353,20 +353,22 @@ export default class extends Component {
           {/*</MainText>*/}
           <OfferText>
             <small>
-              ВЫПОЛНИМ<Br /> ЛАЗЕРНУЮ РЕЗКУ, ГРАВИРОВКУ, УФ-ПЕЧАТЬ
+              ВЫСОКОЕ КАЧЕСТВО ЛАЗЕРНОЙ РЕЗКИ, ГРАВИРОВКИ, УФ-ПЕЧАТИ
             </small>
             <SubOffer>
-              <br />Экономим ваш бюджет - сохраняя качество!
+              <br />По цене производителя!
             </SubOffer>
           </OfferText>
           <FormAnchor name="FormAnchor" />
           <Background>
             <Form>
               <Text>
-                <Header>Оставьте заявку:</Header>
-                <SubHeader>— Расчет стоимости за 27 минут</SubHeader>
+                <SubHeader>— Расчет стоимости за 14 минут</SubHeader>
+                <SubHeader>— Гарантия на работу 12 месяцев</SubHeader>
+                <SubHeader>— Изготовление от 30 минут</SubHeader>
+                <SubHeader>— Любые объемы заказа</SubHeader>
                 <SubHeader>— Бесплатные образцы</SubHeader>
-                <SubHeader>— Подготовим макет</SubHeader>
+                <SubHeader>— Разработка дизайна</SubHeader>
               </Text>
               <Fields>
                 <div>

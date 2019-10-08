@@ -56,7 +56,7 @@ const Button = styled.button`
   color: #ffffff;
   border: none;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
 
@@ -156,7 +156,7 @@ export default class extends Component {
                 }
               }}
             >
-              Заказать
+              Получить консультацию
             </Button>
           </div>
         </FormBlock>

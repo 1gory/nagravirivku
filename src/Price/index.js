@@ -36,7 +36,7 @@ const Header = styled(H2)`
 
 const Name = styled.h3`
   font-family: Roboto, sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: bolder;
   z-index: 100;
 `;
@@ -58,11 +58,11 @@ const Card = styled.div`
 const Button = styled.button`
   width: 70%;
   height: 38px;
-  margin: 30px 0 30px 0;
+  margin: 10px 0 10px 0;
   color: #ffffff;
   border: none;
   border-radius: 5px;
-  font-size: 10px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
   z-index: 1;
@@ -76,8 +76,8 @@ const Button = styled.button`
 
   @media (min-width: 768px) {
     background-color: #d92518;
-    padding: 5px 30px;
-    font-size: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
   }
 `;
 
