@@ -92,11 +92,11 @@ const Form = styled.form`
 const Button = styled.button`
   width: 100%;
   height: 56px;
-  padding: 10px 40px;
+  padding: 10px 20px;
   color: #ffffff;
   border: none;
   border-radius: 5px;
-  font-size: 26px;
+  font-size: 18px;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
 
@@ -353,10 +353,10 @@ export default class extends Component {
           {/*</MainText>*/}
           <OfferText>
             <small>
-              ВЫПОЛНИМ<Br /> ЛАЗЕРНУЮ РЕЗКУ, ГРАВИРОВКУ, УФ-ПЕЧАТЬ
+              ВЫСОКОЕ КАЧЕСТВО ЛАЗЕРНУЮ РЕЗКИ, ГРАВИРОВКИ, УФ-ПЕЧАТИ
             </small>
             <SubOffer>
-              <br />Экономим ваш бюджет - сохраняя качество!
+              <br />По цене производителя!
             </SubOffer>
           </OfferText>
           <FormAnchor name="FormAnchor" />
